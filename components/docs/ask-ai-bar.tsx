@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { isDocsPathname, resolveDocsPathname } from "@/lib/docs-pathname";
 import { ArrowUp, Check, ChevronUp } from "lucide-react";
@@ -51,8 +51,9 @@ export function AskAiBar() {
   const pathname = usePathname();
   const docsPathname = resolveDocsPathname(pathname);
   const isDocsPage = isDocsPathname(pathname);
-  const { barsVisible, revealMobile } = useMobileBottomBars();
+  const { barsVisible, revealMobile, pinBars, unpinBars } = useMobileBottomBars();
   const isXl = useMediaQuery("(min-width: 1280px)");
+  const unpinTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [model, setModel] = useState<AiModelId>("chatgpt");
   const [question, setQuestion] = useState("");
   const [pickerOpen, setPickerOpen] = useState(false);
@@ -109,6 +110,27 @@ export function AskAiBar() {
     setDesktopHoverPeek(false);
     revealMobile();
   }, [revealMobile]);
+
+  const handleInputFocus = useCallback(() => {
+    if (unpinTimerRef.current) {
+      clearTimeout(unpinTimerRef.current);
+      unpinTimerRef.current = null;
+    }
+    pinBars();
+  }, [pinBars]);
+
+  const handleInputBlur = useCallback(() => {
+    unpinTimerRef.current = setTimeout(() => {
+      unpinBars();
+      unpinTimerRef.current = null;
+    }, 200);
+  }, [unpinBars]);
+
+  useEffect(() => {
+    return () => {
+      if (unpinTimerRef.current) clearTimeout(unpinTimerRef.current);
+    };
+  }, []);
 
   if (!isDocsPage) return null;
 
@@ -232,6 +254,8 @@ export function AskAiBar() {
             type="text"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
             onKeyDown={handleKeyDown}
             placeholder={selected.placeholder}
             aria-label={selected.placeholder}

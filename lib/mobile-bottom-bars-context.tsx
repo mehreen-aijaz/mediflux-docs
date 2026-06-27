@@ -17,7 +17,9 @@ interface MobileBottomBarsContextValue {
   scrollVisible: boolean;
   mobileRevealed: boolean;
   revealMobile: () => void;
-  /** Scroll-up or mobile chevron tap — shared by TOC + ask input */
+  pinBars: () => void;
+  unpinBars: () => void;
+  /** Scroll-up, chevron tap, or pinned (e.g. input focused) — shared by TOC + ask input */
   barsVisible: boolean;
 }
 
@@ -25,7 +27,9 @@ const MobileBottomBarsContext =
   createContext<MobileBottomBarsContextValue | null>(null);
 
 export function MobileBottomBarsProvider({ children }: { children: ReactNode }) {
-  const scrollVisible = useScrollAwareBottomBar();
+  const barsPinnedRef = useRef(false);
+  const [barsPinned, setBarsPinned] = useState(false);
+  const scrollVisible = useScrollAwareBottomBar(barsPinnedRef);
   const [mobileRevealed, setMobileRevealed] = useState(false);
   const lastYRef = useRef(0);
 
@@ -42,7 +46,7 @@ export function MobileBottomBarsProvider({ children }: { children: ReactNode }) 
         const y = window.scrollY;
         const delta = y - lastYRef.current;
 
-        if (delta > SCROLL_DOWN_THRESHOLD) {
+        if (!barsPinnedRef.current && delta > SCROLL_DOWN_THRESHOLD) {
           setMobileRevealed(false);
         }
 
@@ -57,11 +61,29 @@ export function MobileBottomBarsProvider({ children }: { children: ReactNode }) 
 
   const revealMobile = useCallback(() => setMobileRevealed(true), []);
 
-  const barsVisible = scrollVisible || mobileRevealed;
+  const pinBars = useCallback(() => {
+    barsPinnedRef.current = true;
+    setBarsPinned(true);
+    setMobileRevealed(true);
+  }, []);
+
+  const unpinBars = useCallback(() => {
+    barsPinnedRef.current = false;
+    setBarsPinned(false);
+  }, []);
+
+  const barsVisible = scrollVisible || mobileRevealed || barsPinned;
 
   return (
     <MobileBottomBarsContext.Provider
-      value={{ scrollVisible, mobileRevealed, revealMobile, barsVisible }}
+      value={{
+        scrollVisible,
+        mobileRevealed,
+        revealMobile,
+        pinBars,
+        unpinBars,
+        barsVisible,
+      }}
     >
       {children}
     </MobileBottomBarsContext.Provider>
