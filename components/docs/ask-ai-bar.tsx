@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { isDocsPathname, resolveDocsPathname } from "@/lib/docs-pathname";
 import { ArrowUp, Check, ChevronUp } from "lucide-react";
 import { BsClaude, BsPerplexity } from "react-icons/bs";
 import { cn } from "@/lib/utils";
@@ -48,14 +49,14 @@ function isAiModelId(value: string): value is AiModelId {
 
 export function AskAiBar() {
   const pathname = usePathname();
+  const docsPathname = resolveDocsPathname(pathname);
+  const isDocsPage = isDocsPathname(pathname);
   const { barsVisible, revealMobile } = useMobileBottomBars();
   const isXl = useMediaQuery("(min-width: 1280px)");
   const [model, setModel] = useState<AiModelId>("chatgpt");
   const [question, setQuestion] = useState("");
   const [pickerOpen, setPickerOpen] = useState(false);
   const [desktopHoverPeek, setDesktopHoverPeek] = useState(false);
-
-  const isDocsPage = pathname.startsWith("/docs");
   const expanded =
     barsVisible || pickerOpen || (isXl && desktopHoverPeek);
 
@@ -86,13 +87,13 @@ export function AskAiBar() {
     const trimmed = question.trim();
     if (!trimmed || typeof window === "undefined") return;
 
-    const pageUrl = new URL(pathname, window.location.origin).toString();
+    const pageUrl = new URL(docsPathname, window.location.origin).toString();
     const prompt = buildDocQuestionPrompt(pageUrl, trimmed);
     const url = getAiModelUrl(model, prompt);
 
     window.open(url, "_blank", "noopener,noreferrer");
     setQuestion("");
-  }, [model, pathname, question]);
+  }, [docsPathname, model, question]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {

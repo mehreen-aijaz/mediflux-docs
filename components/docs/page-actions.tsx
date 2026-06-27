@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
+import { resolveDocsPathname } from "@/lib/docs-pathname";
 import { ArrowUpRight, Check, ChevronDown, Copy, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -132,6 +133,7 @@ function MenuItemRow({
 
 export function PageActions({ markdownUrl, className }: PageActionsProps) {
   const pathname = usePathname();
+  const docsPathname = resolveDocsPathname(pathname);
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -145,8 +147,8 @@ export function PageActions({ markdownUrl, className }: PageActionsProps) {
   const menuItems = useMemo(() => {
     const pageUrl =
       typeof window === "undefined"
-        ? pathname
-        : new URL(pathname, window.location.origin).toString();
+        ? docsPathname
+        : new URL(docsPathname, window.location.origin).toString();
 
     const prompt = `Read ${pageUrl}, I want to ask questions about it.`;
 
@@ -191,7 +193,7 @@ export function PageActions({ markdownUrl, className }: PageActionsProps) {
     ];
 
     return items;
-  }, [copyMarkdown, markdownUrl, pathname]);
+  }, [copyMarkdown, docsPathname, markdownUrl]);
 
   const handleMenuSelect = async (item: MenuItem) => {
     if (item.onClick) {

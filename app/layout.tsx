@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import favicon from "./favicon.png";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
   },
   description:
     "Comprehensive documentation for MediFlux - the pharmacy and healthcare management platform.",
+  icons: {
+    icon: favicon.src,
+  },
 };
 
 export default function RootLayout({

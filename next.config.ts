@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: "/",
+        destination: "/docs/introduction",
+      },
+      {
         source: "/docs/:path*.md",
         destination: "/llms.mdx/docs/:path*",
       },

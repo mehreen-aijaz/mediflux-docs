@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, icons } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { resolveDocsPathname } from "@/lib/docs-pathname";
 import type { Root, Node, Folder, Item } from "fumadocs-core/page-tree";
 
 interface SidebarProps {
@@ -125,7 +126,7 @@ function SidebarFolder({
   level: number;
   iconMap: Record<string, string>;
 }) {
-  const pathname = usePathname();
+  const pathname = resolveDocsPathname(usePathname());
   const folderUrl = getFolderUrl(node);
   const isActive = !!(folderUrl && pathname === folderUrl);
   const isChildActive = hasActiveChild(node, pathname);
@@ -179,7 +180,7 @@ function SidebarItem({
   level: number;
   iconMap: Record<string, string>;
 }) {
-  const pathname = usePathname();
+  const pathname = resolveDocsPathname(usePathname());
   const isExternal =
     node.external ??
     (node.url.startsWith("http://") || node.url.startsWith("https://"));

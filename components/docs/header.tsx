@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu, ChevronRight } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { SupportPopover } from "./support-popover";
 import { cn } from "@/lib/utils";
+import favicon from "@/app/favicon.png";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -32,15 +34,28 @@ export function Header({ onMenuToggle, onSearchOpen }: HeaderProps) {
           <Menu className="h-5 w-5" />
         </button>
 
-        <Link href="/" className="mr-6 flex items-center gap-2 text-foreground">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">M</span>
-          </div>
-          <span className="hidden font-semibold sm:inline-block">MediFlux</span>
-          <span className="hidden rounded-md border px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground sm:inline-block">
-            Docs
-          </span>
-        </Link>
+        <div
+          className={cn(
+            "mr-6 flex shrink-0 items-center xl:mr-0",
+            "xl:w-[var(--docs-sidebar-width)] xl:pl-4 xl:pr-2"
+          )}
+        >
+          <Link
+            href="/"
+            className="flex items-center gap-2 px-2 text-foreground"
+            style={{ paddingLeft: 8 }}
+          >
+            <Image
+              src={favicon}
+              alt="MediFlux"
+              width={28}
+              height={28}
+              className="h-7 w-7 shrink-0 rounded-md bg-primary"
+              priority
+            />
+            <span className="hidden font-semibold sm:inline-block">MediFlux Docs</span>
+          </Link>
+        </div>
 
         <div className="flex flex-1 items-center justify-center gap-2 max-md:justify-end">
           <button
