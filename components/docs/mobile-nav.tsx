@@ -39,7 +39,7 @@ export function MobileNav({ open, onClose, tree, iconMap }: MobileNavProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 bg-black/50 xl:hidden"
+            className="fixed inset-0 z-[70] bg-black/50 xl:hidden"
             onClick={onClose}
           />
           <motion.div
@@ -48,7 +48,7 @@ export function MobileNav({ open, onClose, tree, iconMap }: MobileNavProps) {
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             className={cn(
-              "docs-scrollbar fixed inset-y-0 left-0 z-50 flex w-72 flex-col overflow-y-auto xl:hidden",
+              "docs-scrollbar fixed inset-y-0 left-0 z-[71] flex w-72 flex-col overflow-y-auto xl:hidden",
               "border-r border-border bg-background"
             )}
           >
