@@ -1,5 +1,6 @@
 import { type ComponentProps, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { ZoomableImage } from "@/components/mdx/zoomable-image";
 
 function getYouTubeId(input: string) {
   if (!input.includes("youtube.com") && !input.includes("youtu.be")) {
@@ -33,29 +34,34 @@ function MediaFigure({
 
   return (
     <figure className={cn("media-figure my-8", className)}>
-      <div className="overflow-hidden rounded-t-xl border border-border/80 bg-card shadow-sm">
-        {children}
+      <div className="overflow-hidden rounded-xl border border-border !bg-muted/60 shadow-sm">
+        <div
+          className={cn(
+            "flex items-center justify-center bg-muted/60 m-1.5 sm:m-2 border !border-gray-300 rounded-md",
+          )}
+        >
+          <div className="w-full">{children}</div>
+        </div>
+        {hasCaption && (
+          <figcaption className="!bg-muted/60 !p-1.5 text-center !sm:p-2 !pb-3">
+            {title && (
+              <p className="text-sm font-semibold text-heading !m-0 !-mt-1">
+                {title}
+              </p>
+            )}
+            {description && (
+              <p
+                className={cn(
+                  "text-sm leading-relaxed text-muted-foreground !m-0",
+                  title && "mt-1.5"
+                )}
+              >
+                {description}
+              </p>
+            )}
+          </figcaption>
+        )}
       </div>
-      {hasCaption && (
-        <figcaption className="text-center !rounded-b-xl !rounded-t-none -mt-3 !border-none !bg-gray-200/70">
-          {title && (
-            <p
-              className={cn(
-                "font-sans !pt-4 ",
-                "text-base font-medium text-foreground",
-                description ? "!mb-0" : "!mb-2"
-              )}
-            >
-              {title}
-            </p>
-          )}
-          {description && (
-            <p className="font-sans text-sm text-muted-foreground !mb-3">
-              {description}
-            </p>
-          )}
-        </figcaption>
-      )}
     </figure>
   );
 }
@@ -64,18 +70,12 @@ export function MdxImage({
   src,
   alt,
   className,
-  ...props
 }: ComponentProps<"img">) {
-  if (!src) return null;
+  if (!src || typeof src !== "string") return null;
 
   return (
     <MediaFigure title={alt}>
-      <img
-        src={src}
-        alt={alt ?? ""}
-        className={cn("block h-auto w-full", className)}
-        {...props}
-      />
+      <ZoomableImage src={src} alt={alt ?? ""} className={className} />
     </MediaFigure>
   );
 }
@@ -91,11 +91,7 @@ interface FigureProps {
 export function Figure({ src, title, description, alt, className }: FigureProps) {
   return (
     <MediaFigure title={title} description={description} className={className}>
-      <img
-        src={src}
-        alt={alt ?? title}
-        className="block h-auto w-full"
-      />
+      <ZoomableImage src={src} alt={alt ?? title} />
     </MediaFigure>
   );
 }
@@ -121,7 +117,7 @@ export function YouTube({
 
   return (
     <MediaFigure title={title} description={description} className={className}>
-      <div className="relative aspect-video w-full bg-black">
+      <div className="media-figure__media relative aspect-video w-full overflow-hidden rounded-md bg-black">
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}
           title={title}
@@ -152,7 +148,7 @@ export function Video({ src, title, description, className }: VideoProps) {
         playsInline
         preload="metadata"
         title={accessibleTitle}
-        className="aspect-video w-full bg-black"
+        className="media-figure__media aspect-video w-full overflow-hidden rounded-md bg-black"
       >
         Your browser does not support embedded videos.
       </video>
