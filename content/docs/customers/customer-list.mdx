@@ -1,0 +1,237 @@
+---
+title: Customer List
+description: View and manage all your customers, switch between list and grid views, filter by store type, and export customer data.
+icon: List
+---
+
+The **Customer List** is your main directory of every customer linked to your pharmacy — both individual consumers and businesses. It gives you a real-time snapshot of outstanding dues, customer ratings, and contact details, with the flexibility to view your customers as a list or as cards.
+
+---
+
+## Summary cards
+
+At the top of the page, four summary cards give you an at-a-glance overview of your entire customer base:
+
+| Card | What it shows |
+| --- | --- |
+| **Total Customers** | Total number of customer profiles in your system |
+| **Outstanding** | Total amount owed to you across all customers |
+| **Linked Stores** | Number of customers who are other pharmacy stores linked through MediFlux |
+| **Local Customers** | Number of manually added local/individual customers |
+
+<Figure
+  src="/images/customer-summary-cards.png"
+  title="Summary cards"
+  description="Four summary cards at the top of the Customer List page."
+/>
+
+---
+
+## Searching customers
+
+The search bar at the top lets you search across **names, phone numbers, emails, and addresses**. Just start typing and the list filters instantly.
+
+To the left of the search bar is an **All** dropdown — use it to narrow the search scope if needed.
+
+<Figure
+  src="/images/customer-search.png"
+  title="Search bar"
+  description="Search across names, phone numbers, emails, and addresses."
+/>
+
+---
+
+## Filter chips
+
+Below the search bar, two quick-filter chips let you slice the list instantly:
+
+| Filter | What it shows |
+| --- | --- |
+| **Linked Stores** | Only customers who are other pharmacy stores linked via MediFlux |
+| **Local Customers** | Only manually added individual or business customers |
+
+<Figure
+  src="/images/customer-filter-chips.png"
+  title="Filter chips"
+  description="Quick-filter chips for Linked Stores and Local Customers."
+/>
+
+---
+
+## Switching between List and Grid view
+
+Next to the filter chips, two view icons let you switch how customers are displayed:
+
+- **Grid view** — shows each customer as a card with their rating badge, name, type (Consumer/Business), phone, email, address, and how long they've been a customer
+- **List view** — shows customers in a compact table format
+
+<Figure
+  src="/images/customer-grid-view.png"
+  title="Grid view"
+  description="Customers displayed as cards in Grid view."
+/>
+
+<Figure
+  src="/images/customer-list-view.png"
+  title="List view"
+  description="Customers displayed in a compact table in List view."
+/>
+
+---
+
+## Customer Rating badges
+
+Every customer card or row shows a rating badge based on the **Customer Rating** stars assigned when the customer was added or edited:
+
+| Badge | Meaning |
+| --- | --- |
+| **None** | No rating assigned |
+| **Gold** | A high rating assigned to the customer |
+
+---
+
+## The customer table (List view)
+
+| Column | Description |
+| --- | --- |
+| **Name** | Customer name, with a **Linked Store** tag if applicable |
+| **Age** | Customer's age, if added. Shows `—` if not provided |
+| **Gender** | Customer's gender, if added. Shows `—` if not provided |
+| **Phone** | Primary contact number |
+| **Email** | Customer's email address |
+| **Outstanding** | Amount currently owed by this customer, shown in red |
+| **Last Payment** | Date of the customer's last payment. Shows `—` if none recorded |
+| **Actions** | Quick action menu for that customer row |
+
+<Figure
+  src="/images/customer-table-list.png"
+  title="Customer table — List view"
+  description="Detailed table view of all customer records."
+/>
+
+---
+
+## Sorting the table
+
+The **Name** and **Outstanding** columns are sortable. Click the column header to toggle between ascending and descending order.
+
+---
+
+## Filter & Sort panel
+
+Click the **filter icon** to open the **Filter & Sort** panel:
+
+| Option | What it does |
+| --- | --- |
+| **Sort By** | Sort customers by Name or Last Payment |
+| **Last Payment Date Range** | Filter customers by a Start Date and End Date based on their last payment |
+
+Click **Apply Filters** to apply, or **Reset** to clear all filters.
+
+<Figure
+  src="/images/customer-filter-sort-panel.png"
+  title="Filter & Sort panel"
+  description="Advanced filtering and sorting options for the customer list."
+/>
+
+---
+
+## Page-level buttons
+
+| Button | What it does |
+| --- | --- |
+| **+ Add Customer** | Opens the Add New Customer form to create a new customer profile |
+| **Add Payment** | Opens the Add Customer Payment dialog to record a payment from a customer |
+| **Export** | Opens the Export Customers dialog |
+
+<Figure
+  src="/images/customer-page-buttons.png"
+  title="Page-level action buttons"
+  description="Add Customer, Add Payment, and Export buttons at the top of the page."
+/>
+
+---
+
+## Exporting customers
+
+Click the **export icon** to open the **Export Customers** dialog.
+
+### Columns to include
+
+Choose which columns to include in the export. **Name** is always included by default. You can select or deselect:
+
+`GSTIN`, `License Number`, `Phone`, `Address`, `Created At`, `Last Payment Date`, `Last Bill Date`, `Current Outstanding`
+
+Click **Deselect All** to clear all selections at once.
+
+### Filter by date ranges
+
+Filter the export by three independent date ranges, each with quick options — **All Time, This Month, Last Month, This Quarter, This Year, Last Year** — or a custom **From** and **To** date:
+
+- **Created At**
+- **Last Payment Date**
+- **Last Bill Date**
+
+### Filter by outstanding
+
+| Option | What it does |
+| --- | --- |
+| **Has outstanding** | Only include customers with a pending balance |
+| **No outstanding** | Only include customers with a zero balance |
+| **All** | Include all customers regardless of balance |
+
+You can also set a **Min (₹)** and **Max (₹)** outstanding amount range.
+
+### Sort by
+
+Choose a field and order (ascending or descending) to sort the exported data.
+
+### Export format
+
+Click the dropdown arrow on the **Export** button to choose:
+
+- **Export PDF**
+- **Export Excel**
+
+<Figure
+  src="/images/customer-export-columns.png"
+  title="Export Customers — Columns & Filters"
+  description="Select columns and apply filters before exporting."
+/>
+
+<Figure
+  src="/images/customer-export-date-filters.png"
+  title="Export Customers — Date Filters"
+  description="Filter by date ranges with quick options or custom dates."
+/>
+
+<Figure
+  src="/images/customer-export-format.png"
+  title="Export format dropdown"
+  description="Choose between PDF and Excel export formats."
+/>
+
+---
+
+## Next steps
+
+<WideCards>
+  <WideCard
+    title="Add a Customer"
+    description="Learn how to create a new customer profile."
+    href="/docs/customers/add-customer"
+    icon="UserPlus"
+  />
+  <WideCard
+    title="Customer Profile"
+    description="View and manage detailed customer information."
+    href="/docs/customers/customer-profile"
+    icon="User"
+  />
+  <WideCard
+    title="Ledger"
+    description="Track customer transactions and payment history."
+    href="/docs/customers/ledger"
+    icon="BookOpen"
+  />
+</WideCards>
