@@ -15,6 +15,7 @@ import {
   getAiModelUrl,
   type AiModelId,
 } from "@/lib/ai-models";
+import { absoluteDocsMarkdownUrl } from "@/lib/site";
 
 const MODEL_STORAGE_KEY = "mediflux-docs-ai-model";
 
@@ -88,8 +89,11 @@ export function AskAiBar() {
     const trimmed = question.trim();
     if (!trimmed || typeof window === "undefined") return;
 
-    const pageUrl = new URL(docsPathname, window.location.origin).toString();
-    const prompt = buildDocQuestionPrompt(pageUrl, trimmed);
+    const markdownUrl = absoluteDocsMarkdownUrl(
+      docsPathname,
+      window.location.origin
+    );
+    const prompt = buildDocQuestionPrompt(markdownUrl, trimmed);
     const url = getAiModelUrl(model, prompt);
 
     window.open(url, "_blank", "noopener,noreferrer");

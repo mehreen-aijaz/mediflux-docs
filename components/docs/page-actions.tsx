@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { resolveDocsPathname } from "@/lib/docs-pathname";
+import { absoluteDocsMarkdownUrl } from "@/lib/site";
 import { ArrowUpRight, Check, ChevronDown, Copy, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -145,12 +146,12 @@ export function PageActions({ markdownUrl, className }: PageActionsProps) {
   }, [markdownUrl]);
 
   const menuItems = useMemo(() => {
-    const pageUrl =
-      typeof window === "undefined"
-        ? docsPathname
-        : new URL(docsPathname, window.location.origin).toString();
+    const markdownPageUrl = absoluteDocsMarkdownUrl(
+      docsPathname,
+      typeof window === "undefined" ? undefined : window.location.origin
+    );
 
-    const prompt = `Read ${pageUrl}, I want to ask questions about it.`;
+    const prompt = `Read the MediFlux docs page at ${markdownPageUrl}, then answer my questions using only that page.`;
 
     const items: MenuItem[] = [
       {
