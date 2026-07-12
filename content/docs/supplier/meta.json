@@ -1,4 +1,4 @@
 {
-  "title": "Supplier",
-  "pages": ["index"]
+  "title": "Suppliers",
+  "pages": ["index", "supplier-list","add-supplier","supplier-profile","supplier-ledger","supplier-trash"]
 }

@@ -1,0 +1,181 @@
+---
+title: User Management
+description: Manage users, roles, and permissions across your platform, including sessions and activity logs.
+icon: Users
+---
+
+The **User Management** tab is where you manage everyone who has access to your MediFlux store, adding new users, setting their permissions, reviewing active sessions, and tracking activity. It's organized into four sub-tabs: **Users**, **Sessions**, **Create user**, and **Activity logs**.
+
+<Figure
+  src="/images/user-management-tabs.png"
+  title="User Management Tabs"
+  description="Users, Sessions, Create user, and Activity logs sub-tabs."
+/>
+
+---
+
+## Users
+
+The **Users** tab lists everyone with access to your store, showing their name, status (e.g., Active), role (e.g., Staff, Doctor), and email.
+
+Click **Edit** on any user to open the **Edit User** form:
+
+<Figure
+  src="/images/user-management-edit-user.png"
+  title="Edit User Form"
+  description="Update role, name, email, password, and permissions for an existing user."
+/>
+
+| Field | Description |
+| --- | --- |
+| **Role** | The user's role (e.g., Admin, Staff, Sales Person, Accountant) |
+| **Name** | The user's name |
+| **Email** | The user's email (read-only) |
+| **New Password / Confirm Password** | Set a new password for the user, if needed |
+
+### Permissions
+
+Below this, a permissions grid lets you control what the user can **Write**, **Read**, or **Delete** across: Sale, Purchase, Customer, Supplier, Reports, and Customer Ledger.
+
+<Figure
+  src="/images/user-management-permissions.png"
+  title="Permissions Grid"
+  description="Set Write, Read, and Delete access for each module."
+/>
+
+### Clinic Permissions
+
+An expandable **Clinic Permissions** section lets you set Write, Read, and Delete access specifically for Doctors, Schedules, and Appointments.
+
+### Other options
+
+| Option | What it does |
+| --- | --- |
+| **Deactivate User** | Prevents the user from logging in, without deleting their account |
+| **Privacy Mode Enabled** | Hides sensitive information from this user |
+
+Click **Save** to apply changes, or **Cancel** to discard.
+
+---
+
+## Sessions
+
+The **Sessions** tab shows every active login session across your store's users.
+
+| Column | Description |
+| --- | --- |
+| **User** | User's name and role |
+| **Device / Browser** | The device and browser used for that session |
+| **Last Updated** | When the session was last active |
+| **Actions** | **Logout** to end that specific session |
+
+You can filter by a specific user using the **All users** dropdown, and use **Logout All** to end every active session at once.
+
+<Figure
+  src="/images/user-management-sessions.png"
+  title="Device Sessions"
+  description="View and manage active login sessions across all users."
+/>
+
+<Note>
+Logging out a session immediately signs that user out on that device — useful if a staff member's device is lost or a session looks unfamiliar.
+</Note>
+
+---
+
+## Create user
+
+Click **Create user** to add a new user to your store:
+
+<Figure
+  src="/images/user-management-create-user.png"
+  title="Create New User"
+  description="Form to add a new user with role, contact details, password, and permissions."
+/>
+
+### Basic Information
+
+| Field | Description |
+| --- | --- |
+| **Role** | Admin, Staff, Sales Person, or Accountant, required |
+| **Name** | Full name, required |
+| **Email Address** | Required |
+| **Phone** | Optional |
+
+### Security
+
+| Field | Description |
+| --- | --- |
+| **Password** | Required |
+| **Confirm Password** | Required |
+
+### Permissions
+
+Set Write, Read, and Delete access across: Sale, Purchase, Customer, Supplier, Reports, Customer Ledger, Supplier Ledger, and Drug Management. An expandable **Clinic Permissions** section lets you set the same for Doctors, Schedules, and Appointments.
+
+<Figure
+  src="/images/user-management-create-user-permissions.png"
+  title="Create User Permissions"
+  description="Set module and clinic permissions for the new user."
+/>
+
+<Figure
+  src="/images/user-management-role-dropdown.png"
+  title="Role Dropdown"
+  description="Select from Admin, Staff, Sales Person, or Accountant."
+/>
+
+<Note>
+Permissions aren't tied to a fixed role — you can customize exactly what each user can access, regardless of the role you assign them.
+</Note>
+
+---
+
+## Activity logs
+
+The **Activity logs** tab is locked by default and requires a password to access.
+
+<Figure
+  src="/images/user-management-activity-logs.png"
+  title="Activity Logs"
+  description="Locked by default — contact MediFlux support to request access."
+/>
+
+<Note>
+If you need to review activity logs, reach out to MediFlux support with your request, and the support team will assist accordingly.
+</Note>
+
+---
+
+## FAQs
+
+**Can I set custom permissions for a user instead of relying on their role?**
+Yes, permissions are fully customizable per user — the Role field doesn't automatically lock in a fixed set of permissions.
+
+**What happens if I deactivate a user?**
+The user can no longer log in, but their account and historical records aren't deleted.
+
+**How do I access Activity Logs?**
+Activity Logs are locked by default. Reach out to MediFlux support to request access.
+
+**Can I log out a specific device without logging out all users?**
+Yes, use the **Logout** action on that specific session in the Sessions tab.
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+ <Card
+   title="Data Management"
+   description="Manage your store's data."
+   href="/docs/settings/data-management"
+   icon="Database"
+ />
+ <Card
+   title="Subscriptions"
+   description="View and manage your MediFlux subscription plan."
+   href="/docs/settings/subscriptions"
+   icon="CreditCard"
+ />
+</Cards>

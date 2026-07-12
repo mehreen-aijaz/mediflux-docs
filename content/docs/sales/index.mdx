@@ -1,61 +1,211 @@
 ---
 title: Sales
-description: Manage pharmacy sales and transactions.
+description: Manage all your pharmacy sales, credit notes, returns, reorders and drafts, all from one place.
 icon: ShoppingCart
 ---
 
-The Sales section of MediFlux provides a complete point-of-sale system tailored for pharmacy operations. It handles everything from over-the-counter product sales to prescription dispensing, with built-in support for insurance claims processing, discount programs, and regulatory compliance.
+The **Sales** section is where every sale your pharmacy makes is recorded and managed. From walk-in cash sales to wholesale billing, challans, and estimates, MediFlux handles every sale type your pharmacy needs, with each sale automatically updating your inventory and customer ledger.
 
-Every sale in MediFlux follows a structured workflow that ensures accuracy, maintains audit trails, and automatically updates your inventory and accounting records. The POS interface is designed for speed — pharmacy staff can process a typical transaction in under 30 seconds while the system handles all the background bookkeeping.
+---
 
-## Sales Workflow
+## What you can do in Sales
 
-A standard sales transaction flows through these stages:
+- **Record sales:** for individual customers or walk-in patients
+- **Handle different sale types:** retail, wholesale, stock issue, challan, and estimates
+- **Manage prescription-based sales:** Rx, NRx, H1
+- **Issue credit notes:** for billing corrections
+- **Track and process returned items**
+- **Manage reorders and draft bills**
+- **Export your sales list:** as PDF or Excel
 
-1. **Item Entry** — Scan barcodes or search for products to add to the sale
-2. **Prescription Verification** — For Rx items, verify and attach the prescription
-3. **Pricing & Discounts** — Apply insurance, loyalty programs, or manual discounts
-4. **Payment Processing** — Accept cash, card, or split payment methods
-5. **Receipt & Dispensing** — Generate the receipt and dispense medications
+---
 
-## Explore Sales Features
+## Navigating the Sales section
 
-<Cards>
+The **Sales** section in the left sidebar expands into six pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Sales List** | View, search, and manage all your recorded sales |
+| **Add Sale** | Create a new sale bill |
+| **Add Credit Note** | Issue a credit note against an existing sale |
+| **Returned** | View and manage items returned by customers |
+| **Reorders** | Manage reorder requests |
+| **Drafts** | Access saved draft bills that haven't been finalised yet |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783593916573-458990938-sales-sidebar.png"
+  title="Sales sidebar navigation"
+  description="Sidebar showing Sales List, Add Sale, Add Credit Note, Returned, Reorders, and Drafts."
+/>
+
+---
+
+## Quick actions from anywhere
+
+You don't have to navigate to the Sales section to add a sale. The **`+` button** in the top-right corner of any screen gives you instant access:
+
+- **Add Sale:** start a new sale bill from anywhere in MediFlux
+
+<Note>
+The `+` quick-add menu is available on every screen. Use it whenever you need to quickly start a new sale without interrupting your current workflow.
+</Note>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783593997149-864673037-sale-quickAdd.png"
+  title="Dashboard + menu"
+  description="Quick-add menu showing the Add Sale option."
+/>
+
+---
+
+## Sale types
+
+MediFlux supports multiple sale types to cover every billing scenario in your pharmacy:
+
+| Sale Type | Description |
+| --- | --- |
+| **Cash** | Standard retail sale paid in cash |
+| **NRx** | Sale of non-prescription medicines |
+| **H1** | Sale of Schedule H1 controlled medicines |
+| **Wholesale** | Bulk sale to another pharmacy or business |
+| **Stock Issue** | Internal stock movement recorded as a sale |
+| **Challan** | Delivery challan issued without immediate payment |
+| **Estimates** | Estimated bill created before finalising a sale |
+
+---
+
+## Payment methods
+
+MediFlux supports the following payment methods when recording a sale:
+
+| Method | Description |
+| --- | --- |
+| **Cash** | Physical currency payment with automatic change calculation |
+| **Card** | Credit or debit card payment via swipe or payment gateway |
+| **UPI** | Unified Payments Interface, e.g. Google Pay, PhonePe, Paytm |
+| **Net Banking** | Direct bank transfer or online banking payment |
+
+<Note>
+The **Payment Method** field defaults to **None** when creating a new sale. Select one of the above methods before finalising the bill. If the sale is unpaid or pending, you can leave it as **None** and update it later.
+</Note>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594174831-118923284-payment-methods.png"
+  title="Payment Method dropdown"
+  description="Select from Cash, Card, UPI, or Net Banking when recording a sale."
+/>
+
+---
+
+## Sales List
+
+The **Sales List** is your complete sales record. View all your recorded sales at a glance with customer details, sale type, amount, and payment status. Search by customer name, bill number, or date. Filter by sale type, payment method, or date range. Click any sale to view full details, print the bill, or issue a credit note.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594343008-235351158-salesList-overview.png"
+  title="Sales List"
+  description="Complete sales record with search, filters, and detailed sale information."
+/>
+
+---
+
+## Add Sale
+
+The **Add Sale** page is where you create new sale bills. Select the sale type (retail, wholesale, stock issue, challan, or estimate), add customer details, scan or search for drugs, apply discounts, and choose the payment method. The bill auto-calculates taxes, totals, and change due. Once finalised, inventory is updated automatically and the sale appears in the customer's ledger.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594480190-908824246-addSale-overview.png"
+  title="Add Sale"
+  description="Create new sale bills with drug scanning, tax auto-calculation, and multiple payment options."
+/>
+
+---
+
+## Add Credit Note
+
+The **Add Credit Note** page lets you issue credit notes against existing sales for billing corrections, returns, or adjustments. Select the original sale, specify the reason, adjust quantities or amounts, and generate the credit note. This automatically updates the customer's outstanding balance and inventory where applicable.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594672384-754899979-AddCreditNote-overview.png"
+  title="Add Credit Note"
+  description="Issue credit notes against existing sales for corrections and adjustments."
+/>
+
+---
+
+## Returned
+
+The **Returned** page tracks all items returned by customers. View return details including original sale reference, returned drugs, quantities, and refund status. Process new returns, verify returned items, and update inventory automatically. Filter by date, customer, or return status to stay on top of all return activity.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594805278-491206898-retured-overview.png"
+  title="Returned"
+  description="Track and manage customer returns with automatic inventory updates."
+/>
+
+---
+
+## Reorders
+
+The **Reorders** page helps you manage reorder requests from customers or linked stores. View pending reorders, check drug availability, convert reorders into sales, or send purchase orders to suppliers for out-of-stock items. Track reorder status from request to fulfilment.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594924791-173963958-re-order-overview.png"
+  title="Reorders"
+  description="Manage customer reorder requests and convert them into sales or purchase orders."
+/>
+
+---
+
+## Drafts
+
+The **Drafts** page holds all saved but unfinalised sale bills. Access draft estimates, incomplete sales, or bills saved for later. Edit draft details, add or remove drugs, and finalise them into proper sales when ready. Drafts are perfect for creating estimates or handling interrupted billing sessions.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783595033276-706315416-drafts-overview.png"
+  title="Drafts"
+  description="Access, edit, and finalise saved draft bills."
+/>
+
+---
+
+## Next steps
+<Cards cols={2}>
   <Card
-    title="Create Sale"
-    description="Step-by-step guide to creating and processing a new sale transaction."
-    href="/docs/sales/create-sale"
+    title="Sales List"
+    description="View, search, and manage all your recorded sales."
+    href="/docs/sales/sales-list"
+    icon="List"
   />
   <Card
-    title="Returns"
-    description="Process returns, exchanges, and refunds for pharmacy sales."
-    href="/docs/sales/returns"
+    title="Add Sale"
+    description="Create a new sale bill step by step."
+    href="/docs/sales/add-sale"
+    icon="Plus"
+  />
+  <Card
+    title="Add Credit Note"
+    description="Issue a credit note against an existing sale."
+    href="/docs/sales/add-credit-note"
+    icon="FilePlus"
+  />
+  <Card
+    title="Returned"
+    description="View and manage items returned by customers."
+    href="/docs/sales/returned"
+    icon="Undo2"
+  />
+  <Card
+    title="Reorders"
+    description="Manage reorder requests and fulfilment."
+    href="/docs/sales/reorders"
+    icon="RefreshCw"
+  />
+  <Card
+    title="Drafts"
+    description="Access saved draft bills that haven't been finalised yet."
+    href="/docs/sales/drafts"
+    icon="FileEdit"
   />
 </Cards>
-
-## Sales Dashboard
-
-The sales dashboard provides real-time visibility into your pharmacy's transaction activity. Key metrics displayed include:
-
-- **Today's Revenue** — Total sales revenue for the current day
-- **Transaction Count** — Number of completed transactions
-- **Average Sale Value** — Mean transaction amount
-- **Top-Selling Items** — Products with the highest unit sales
-- **Pending Prescriptions** — Rx orders awaiting pharmacist verification
-
-<Callout type="info">
-  Sales data syncs to the [Accounting](/docs/accounting) module in real time. Revenue is posted to your sales ledger and cost of goods sold is calculated automatically based on your inventory costing method (FIFO, weighted average, or specific identification).
-</Callout>
-
-## Payment Methods
-
-MediFlux supports a range of payment methods out of the box:
-
-| Method         | Description                                | Settlement    |
-| -------------- | ------------------------------------------ | ------------- |
-| Cash           | Physical currency with change calculation  | Immediate     |
-| Credit Card    | Visa, Mastercard, Amex via payment gateway | 1–2 days      |
-| Debit Card     | Direct bank account debit                  | Same day      |
-| Insurance      | Third-party payer claims submission        | 7–30 days     |
-| Store Credit   | Previously issued credit balance           | Immediate     |
-| Split Payment  | Combine multiple methods in one sale       | Varies        |

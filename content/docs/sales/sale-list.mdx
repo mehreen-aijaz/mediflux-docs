@@ -1,0 +1,179 @@
+---
+title: Sales List
+description: View, search, filter, and manage all your recorded sales in one place.
+icon: List
+---
+
+The **Sales List** is your complete record of every sale made in your pharmacy. You can search across sales, filter by sale type, payment method, payment status, and date range, and export your sales data as PDF or Excel.
+
+---
+
+## Searching sales
+
+The search bar at the top lets you search across **suppliers, drugs, and challan numbers**. Just start typing and the list filters instantly.
+
+To the left of the search bar is an **All** dropdown. Use it to narrow the search scope if needed.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666304362-940150308-salelist-sidebar.png"
+  title="Sales list"
+  description="Navigate to Sales list from sidebar"
+/>
+
+---
+
+## Filter chips
+
+Below the search bar, six quick-filter chips let you slice the list by sale type instantly:
+
+| Filter | What it shows |
+| --- | --- |
+| **NRx** | Non-prescription medicine sales |
+| **H1** | Schedule H1 controlled medicine sales |
+| **Cash** | Standard retail cash sales |
+| **Wholesale** | Bulk sales to another pharmacy or business |
+| **Stock Issue** | Internal stock movement recorded as a sale |
+| **Challan** | Delivery challans |
+| **Estimates** | Estimated bills not yet finalised |
+
+Click a chip to apply it, click again to remove it.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666396509-750740759-sales-filetchip.png"
+  title="Filter chips"
+  description="Quick-filter chips for slicing the sales list by sale type."
+/>
+
+---
+
+## The sales table
+
+The main table lists all your sales with the following columns:
+
+| Column | Description |
+| --- | --- |
+| **Sale Details** | Invoice number and payment method used for the sale |
+| **Customer** | Customer name and date/time of the sale |
+| **Items** | Total value of the sale and number of items |
+| **Actions** | Quick action menu for that sale row |
+
+The page shows a **Found X** count above the table indicating how many sales match the current filters.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666455695-86851393-sales-table.png"
+  title="Sales List table"
+  description="Main table listing all sales with details, customer, items, and actions."
+/>
+
+---
+
+## Expanding a sale row
+
+Click the **chevron (▾)** on the left of any sale row to expand it and see the full line item breakdown:
+
+| Column | Description |
+| --- | --- |
+| **SR.** | Serial number of the line item |
+| **HSN** | HSN code of the drug |
+| **Product** | Name of the drug |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date of the batch |
+| **QTY** | Quantity sold |
+| **MRP** | Maximum Retail Price |
+| **DIS** | Discount percentage applied |
+| **Total** | Total amount for that line item |
+
+The **Grand Total** is shown at the bottom right of the expanded row.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666519268-528475441-expanded-sale-row.png"
+  title="Expanded sale row"
+  description="Line item breakdown with HSN, product, batch, expiry, quantity, MRP, discount, and total."
+/>
+
+---
+
+## Row actions
+
+Clicking the **three-dot menu (⋮)** on any sale row opens a quick-actions menu with three options:
+
+| Option | What it does |
+| --- | --- |
+| **View Invoice** | Opens the full invoice for this sale |
+| **Update** | Edit this sale entry |
+| **Return Sale** | Initiate a return for this sale |
+
+These options are the same for all sale types.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666705318-74862538-action-menu.png"
+  title="Row actions"
+  description="Three-dot menu showing View Invoice, Update, and Return Sale options."
+/>
+
+---
+
+## Filters panel
+
+Click the **Filter** button at the top-right to open the **Sales Filters** panel:
+
+| Filter | Options |
+| --- | --- |
+| **Drug Type** | All, Rx, NRx, H1 |
+| **Payment Method** | All Methods, Cash, Card, UPI, Bank Transfer, Cheque, Stock Issue |
+| **Payment Status** | All Statuses, Paid, Unpaid, Partial |
+| **Sale Type** | Wholesale sales only, Stock Issue |
+| **Date Range** | Custom From and To date |
+| **Amount Range** | Min (₹) and Max (₹) |
+| **Sort By** | Field: Sale Date, Total Amount, Customer Name, Invoice Number, Created At. Order: Ascending or Descending |
+
+Click **Apply** to apply filters. The filter button highlights when active filters are applied.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666852559-987432627-sales-list-filter.png"
+  title="Filter Button"
+  description="Filter by drug type , payment method etc and sort by different options."
+/>
+---
+
+## Exporting sales
+
+Click the **export icon** at the top-right to choose your export format:
+
+- **Export as PDF**
+- **Export as Excel**
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783667031316-551076294-sales-export-options.png"
+  title="Export options"
+  description="Choose between PDF and Excel export formats."
+/>
+
+---
+
+## Adding a sale from anywhere
+
+You don't have to navigate to the Sales section to add a sale. Click the **`+` button** in the top-right corner of any screen and select **Add Sale** to start a new sale bill from anywhere in MediFlux.
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783667143930-70609404-addsale-quickbutton.png"
+  title="Quick Add Sale"
+  description="Click the `+` button in the top-right corner of any screen and select Add Sale to start a new sale from anywhere."
+/>
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Add Sale"
+    description="Create a new sale bill step by step."
+    href="/docs/sales/add-sale"
+    icon="Plus"
+  />
+  <Card
+    title="Add Credit Note"
+    description="Issue a credit note against an existing sale."
+    href="/docs/sales/add-credit-note"
+    icon="FilePlus"
+  />
+</Cards>

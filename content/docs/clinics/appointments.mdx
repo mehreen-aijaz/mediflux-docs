@@ -1,0 +1,141 @@
+---
+title: Appointments
+description: Manage patient appointments, share a public booking link, and track appointment status and payments.
+icon: Calendar
+---
+
+The **Appointments** page is where every patient appointment booked with your clinic's doctors is tracked — whether added manually by you or booked by a patient through your public booking link.
+
+---
+
+## Searching and filtering appointments
+
+The search bar lets you search by **patient name, phone, or email**.
+
+Click **Filters** to open the **Filters** panel:
+
+| Option | What it does |
+| --- | --- |
+| **Doctor** | Filter by a specific doctor |
+| **Schedule** | Filter by a specific schedule |
+| **Status** | Filter by appointment status |
+| **Appointment Date Range** | This Week, This Month, Today, or a custom From/To range |
+| **Follow-up Date Range** | This Week, This Month, Today, or a custom From/To range |
+| **Sort By** | Sort by Appointment Date, in ascending or descending order |
+
+Click **Apply Filters** to apply, or **Reset** to clear all filters.
+
+You can also control how many appointments are shown per page, and use the refresh icon to reload the list.
+
+*[Screenshot: Search bar and Filters]*
+
+---
+
+## Public Booking Link
+
+Below the search bar, MediFlux gives you a **Public Booking Link** — a link you can share with patients so they can book appointments themselves, without you needing to add them manually.
+
+| Option | What it does |
+| --- | --- |
+| **Copy** | Copies the booking link |
+| **Open Link** | Opens the booking link in a new tab |
+| **Show QR Code** | Displays a scannable QR code version of the link, which can also be downloaded |
+
+*[Screenshot: Public Booking Link][Screenshot: QR Code view]*
+
+---
+
+### Adding an appointment
+
+Click **+ Add Appointment** to open a 4-step form:
+
+*[Screenshot: Add Appointment button]*
+
+#### Step 1: Schedule
+
+Search by doctor name or speciality, or use **Filter by Days** to narrow doctors down by their available days. Only doctors with a matching schedule are shown, along with their available days and consultation fee.
+
+#### Step 2: Date
+
+Select an appointment date from the calendar. Only dates matching the selected doctor's available days can be chosen.
+
+#### Step 3: Time
+
+Select an available time slot for the chosen date. Each slot shows its start and end time.
+
+#### Step 4: Details
+
+| Field | Description |
+| --- | --- |
+| **Patient** | Search for an existing patient by name or phone (minimum 3 characters), required |
+| **Appointment Type** | e.g., Consultation |
+| **Symptoms** | Enter each symptom on a new line |
+| **Chief Complaint** | Describe the main reason for the visit |
+| **Notes** | Any additional notes |
+| **Consultation Fee** | Pulled from the selected schedule |
+| **Discount** | Discount applied, if any |
+| **Final Amount** | Calculated after discount |
+| **Paid Amount** | Amount paid at the time of booking |
+| **Payment Method** | e.g., Cash |
+
+Click **Create Appointment** to save, or **Cancel** to discard.
+
+*[Screenshot: Add Appointment form]*
+
+---
+
+### Appointment cards
+
+Once created, each appointment appears as a card with:
+
+| Field | Description |
+| --- | --- |
+| **Patient name and phone** | The patient the appointment is for |
+| **Doctor** | The doctor the appointment is with |
+| **Date and Time** | When the appointment is scheduled |
+| **Status** | Scheduled, Confirmed, or Cancelled |
+| **Payment status** | Shows if payment is Partially Paid, along with the remaining amount, and an **Add Payment** button |
+| **Appointment Type** | e.g., Routine Checkup |
+
+*[Screenshot: Appointment card]*
+
+#### Updating appointment status
+
+Click the status dropdown on any appointment card to change it between **Scheduled**, **Confirmed**, and **Cancelled**.
+
+---
+
+### FAQs
+
+**Can patients book appointments themselves?**
+
+Yes, share your **Public Booking Link** (or its QR code) with patients, and they can book an appointment directly without you needing to add it manually.
+
+**What happens if I mark an appointment as Cancelled?**
+
+The appointment's status changes to Cancelled and it's no longer treated as an active booking, though it remains on record.
+
+**Can I record a partial payment for an appointment?**
+
+Yes, the appointment card shows a **Partially Paid** status with the remaining amount, and you can click **Add Payment** to record further payments.
+
+---
+
+### Common Mistakes to Avoid
+
+- Adding an appointment without checking the doctor's actual availability first, always go through the Schedule → Date → Time steps rather than assuming a slot is free
+- Forgetting to update appointment status: leaving appointments as **Scheduled** even after they're confirmed or cancelled can make your appointment list inaccurate
+- Not recording partial payments: if a patient pays only part of the consultation fee, make sure to log it so outstanding amounts are tracked correctly
+
+---
+
+## Next steps
+
+<WideCards>
+  <WideCard
+    title="Pending Bookings"
+    description="Confirm or reject new booking requests."
+    href="/docs/clinic/pending-bookings"
+    icon="Clock"
+  />
+</WideCards>

@@ -1,0 +1,252 @@
+---
+title: Drug List
+description: View and manage all the drugs in your inventory, switch between consolidated and separated views, filter by type or expiry, and import or export your stock data.
+icon: List 
+---
+
+The **Drug List** is your main directory of every drug in your pharmacy's inventory. It gives you a real-time snapshot of stock levels, value, and expiry status, with the flexibility to view your inventory either grouped by drug or broken down batch-by-batch.
+
+---
+
+## Summary cards
+
+At the top of the page, three summary cards give you an at-a-glance overview of your entire inventory:
+
+| Card | What it shows |
+| --- | --- |
+| **Total Drugs** | Total number of unique drugs in your inventory |
+| **Total Value** | Total MRP value of your current stock, along with its cost value |
+| **Expired / Out of Stock** | Number of drugs that have crossed their expiry date, and number of drugs with zero stock remaining |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783586173941-490014909-drugList-summarycards.png"
+  title="Summary cards"
+  description="Three summary cards at the top of the Drug List page."
+/>
+
+---
+
+## Searching drugs
+
+The search bar at the top lets you search across **brands, salts, drug classes, or manufacturers**. Just start typing and the list filters instantly.
+
+To the left of the search bar is an **All** dropdown. Use it to narrow the search scope to a specific field:
+
+| Option | Searches by |
+| --- | --- |
+| **All** | Every field below, combined |
+| **Batch Number** | The drug's batch number |
+| **HSN** | HSN code |
+| **Manufacturer** | Manufacturer name |
+| **Rack Number** | Rack location |
+| **Salts** | Active salts in the drug |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783586322808-142208542-drug-searchabr.png"
+  title="Drug Search bar"
+  description="Search medicines by name, brands, or drug classs to quickly locate inventory items."
+/>
+
+---
+
+## Filter chips
+
+Below the search bar, quick-filter chips let you slice the list instantly:
+
+| Filter | What it shows |
+| --- | --- |
+| **Stock dropdown** (defaults to In Stock) | Toggle between In Stock, Out of Stock, or view all drugs regardless of stock |
+| **Expired** | Drugs that have crossed their expiry date |
+| **NRx** | Non-prescription (over-the-counter) drugs |
+| **Rx** | Prescription-required drugs |
+| **H1** | Schedule H1 drugs |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783586551750-8430190-filterchip.png"
+  title="Filter chips"
+  description="Quick-filter chips for stock status, expiry, and drug type."
+/>
+
+---
+
+## Switching between Consolidated and Separated View
+
+Below the filter chips, two tabs let you switch how drugs are displayed:
+
+- **Consolidated View:** groups every batch of the same drug into a single row, useful for a quick, uncluttered look at your inventory by drug name
+- **Separated View:** lists every batch as its own row, with rack number and full row-level actions available
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783586621633-275411310-swtich-view.png"
+  title="View tabs"
+  description="Toggle between Consolidated and Separated View."
+/>
+
+---
+
+## The drug table
+
+### Consolidated View columns
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Row number |
+| **Name** | Drug name |
+| **Batch** | Batch number |
+| **HSN** | HSN code. Shows `—` if not added |
+| **Stock** | Units currently available |
+| **Trade P** | Trade price, the wholesale cost paid to the supplier. Shows `—` if not added |
+| **MRP** | Maximum retail price |
+| **Expiry** | Expiry date (month/year) |
+| **Supplier** | Supplier the drug was purchased from |
+
+### Separated View columns
+
+Separated View shows the same information as Consolidated View, with two differences: a **Rack** column instead of grouping by drug, and an **Actions** column for row-level actions.
+
+| Column | Description |
+| --- | --- |
+| **Rack** | Rack location of the batch. Shows `—` if not added |
+| **Price** | Same as MRP |
+| **Actions** | Opens a menu with **Edit** and **Add Deal** for that drug |
+
+---
+
+## Selecting drugs and bulk actions
+
+Selecting one or more rows using the checkboxes brings up a toolbar with bulk actions. The options available depend on the view you're in:
+
+| Action | Available in | What it does |
+| --- | --- | --- |
+| **Export Activities** | Both views | Exports the activity history of the selected drug(s) |
+| **Generate Debit Note** | Separated View only | Raises a debit note to the supplier for the selected drug, to request a return |
+| **Reorder** | Separated View only | Sends a purchase order to the supplier for the selected drug. This only works if the supplier is also on MediFlux |
+| **Update** | Separated View only | Opens a form to update the selected drug's batch number, rack number, stock, expiry, HSN code, NDC, dosage form, tax rates, salts, and drug classes |
+| **Delete** | Separated View only | Removes the selected drug(s), moving them to Trash |
+
+---
+
+<Note>
+Consolidated View only allows exporting activity for selected groups. Switch to Separated View to reorder, update, generate a debit note, or delete a specific batch.
+</Note>
+
+### Consolidated View
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783586809233-758648303-consolidatedView.png"
+  title="Bulk actions toolbar"
+  description="Toolbar appearing when rows are selected in Consolidated View."
+/>
+
+---
+### Separated View
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587131168-340925077-seperated%20View.png"
+  title="Bulk actions toolbar"
+  description="Toolbar appearing when rows are selected in  Separated View."
+/>
+
+
+## Add Deal
+
+The **Add Deal** action (from the row's **⋮ menu** in Separated View) lets you set up a purchase scheme for a drug, for example a "buy X get Y free" offer, by specifying a **Buy Quantity**, **Free Quantity**, a **Start Date** and **End Date**, and whether the deal is **Active**.
+
+---
+
+## Viewing a drug's full details
+
+Click on any drug name to open its **Drug Profile**, showing complete details like cost, trade price, margin, composition, tax rates, and recent activity.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587226014-957367912-drug-details.png"
+  title="Drug Profile"
+  description="Full drug details including cost, trade price, margin, and composition."
+/>
+
+---
+
+## Filter & Sort panel
+
+Click the **Filter** button to open the **Filter & Sort** panel, with three tabs:
+
+### Filters
+
+| Option | What it does |
+| --- | --- |
+| **Quick Filters** | Low Stock, Expiring Soon, Out of Stock |
+| **Sort By** | Sort by Name, Stock, Expiry, or Date Added |
+| **Type** | All, NRx, Rx, H1 |
+| **Stock** | In Stock, Out of Stock, or Low Stock Only |
+| **Expiry** | Valid, Expired, 1 Month, 3 Months, 6 Months, 1 Year, or a Custom range |
+| **Suppliers** | Filter by one or more suppliers |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587354809-640574457-drugFilter.png"
+  title="Drug Filter "
+  description="Filter drugs by stock status, sort by Name, Stock, Expiry, or Date Added, and filter by drug type etc."
+/>
+
+### Saved
+
+Save your current filter combination with a custom name for quick reuse later. Previously saved filters are listed here and can be deleted.
+
+### Insights
+
+Shows filter statistics for your current view: Total Items, In Stock, Low Stock, Expiring Soon, Out of Stock, and a Stock Distribution bar.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587616091-670485709-FilterPanel.png"
+  title="Filter & Sort panel"
+  description="Filters, Saved filters, and Insights tabs."
+/>
+
+---
+
+## Page-level buttons
+
+| Button | What it does |
+| --- | --- |
+| **Import** | Opens the Import Drugs wizard to bulk-add drugs from a file |
+| **Export** | Instantly downloads your current drug list as a PDF |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587678380-671297340-pagelevel-buttons.png"
+  title="Page-level buttons"
+  description="Import and Export buttons at the top of the Drug List."
+/>
+
+---
+
+## Importing your inventory
+
+If you're setting up MediFlux for the first time or need to add drugs in bulk, the **Import** button opens a step-by-step wizard:
+
+1. **Upload:** upload your inventory as a CSV or Excel file. You can also download a template to see the expected format
+2. **Map Headers:** match the columns in your file to MediFlux's drug fields
+3. **Preview:** review your data before confirming the import
+4. **Complete:** finishes the import and adds the drugs to your inventory
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587724164-934031354-importdrugs.png"
+  title="Import Drugs wizard"
+  description="Step-by-step wizard for bulk importing drugs from a file."
+/>
+
+---
+
+## Next steps
+<Cards cols={2}>
+  <Card
+    title="Catalog Share"
+    description="Raise a debit note to a supplier to request a return."
+    href="/docs/inventory/create-debit-note"
+    icon="FileMinus"
+  />
+  <Card
+    title="Billing Notes"
+    description="Recover drugs that have been deleted from inventory."
+    href="/docs/inventory/trash"
+    icon="Trash"
+  />
+</Cards>

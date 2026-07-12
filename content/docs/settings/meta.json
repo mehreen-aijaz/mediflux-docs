@@ -1,4 +1,5 @@
 {
   "title": "Settings",
-  "pages": ["index"]
+  "pages": ["index", "account-info","modules","invoice-counter","notifications","bill-templates"
+            ,"integrations","user-management","data-management", "subscriptions","accounting-settings","referrals"]
 }

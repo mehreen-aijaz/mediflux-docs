@@ -1,4 +1,4 @@
 {
   "title": "Inventory",
-  "pages": ["index"]
+  "pages": ["index","drug-list","catalog-share","billing-notes","create-debit-note","trash"]
 }

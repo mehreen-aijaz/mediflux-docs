@@ -1,0 +1,134 @@
+---
+title: Create Debit Note
+description: Raise a debit note to a supplier to remove medications from your inventory and request a return.
+icon: FilePlus
+---
+
+A **Debit Note** is how you formally record that you're returning medications to a supplier, for reasons like damaged stock, excess quantity, or expired drugs. Creating a debit note permanently removes the selected quantity from your inventory, since that stock is no longer available for sale once it's marked for return.
+
+There are two ways to create a debit note in MediFlux.
+
+---
+
+## Method 1: From the Drug List (Separated View)
+
+Select one or more drugs from the **Separated View** on the Drug List, then click **Generate Debit Note** from the bulk actions toolbar. This opens the **Create Debit Note** dialog for the drugs you selected.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589497473-114623559-generate-debitnote.png"
+  title="Generate Debit Note from Drug List"
+  description="Bulk action toolbar showing Generate Debit Note option."
+/>
+
+<Note>
+Selected medications will be permanently removed from inventory and will not be available for sale after creating the debit note.
+</Note>
+
+### Available Medications
+
+For each selected drug, you'll see:
+
+| Field | Description |
+| --- | --- |
+| **Medication Details** | Drug name, units per strip, and supplier |
+| **Current Stock** | Units currently available |
+| **Quantity to Remove** | Enter the quantity to remove, in strips and tablets, for precise amounts |
+
+The dialog shows a running **Total medications selected** and **Total units to remove** at the bottom. Use **Reset All** to clear your quantities and start over.
+
+Once you're done, click **Create Debit Note** to proceed.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589576596-186366788-debitnote-dialogue.png"
+  title="Available Medications"
+  description="Selected drugs with current stock and quantity to remove fields."
+/>
+
+---
+
+## Method 2: From Drugs → Create Debit Note
+
+This opens a dedicated page to build a debit note from scratch, useful when you want to add drugs individually rather than starting from a selection on the Drug List.
+
+| Field | Description |
+| --- | --- |
+| **Date** | Date of the debit note |
+| **Search for suppliers** | Select the supplier the debit note is being raised to |
+
+### Drug entry table
+
+For each drug added to the note, fill in:
+
+| Column | Description |
+| --- | --- |
+| **Drug Name** | Search and select the drug |
+| **Stock** | Current stock, shown automatically |
+| **Qty** | Quantity to remove |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date (MM/YY) |
+| **Free** | Free units, if any |
+| **Cost** | Cost price |
+| **MRP** | Maximum retail price |
+| **Disc %** | Discount percentage |
+| **CGST / SGST / IGST** | Applicable tax rates |
+
+Click the **+** below the table to add another drug row, or the trash icon to remove one.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589646647-563441710-creditnote-page.png"
+  title="Create Debit Note page"
+  description="Dedicated page to build a debit note from scratch with drug entry table."
+/>
+
+---
+
+## Confirming the debit note
+
+**Method 1 (Separated View)** shows a confirmation prompt before finalizing:
+
+> **Create Debit Note?**
+>
+> Removed Stock will not be available to sell
+>
+> Total units to remove: [X]
+
+Click **Confirm** to finalize, or **Cancel** to go back and make changes.
+
+**Method 2 (Create Debit Note page)** doesn't show this prompt. Clicking **Create Debit Note** submits it directly, and a success message confirms the debit note has been created.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589704549-784839274-confirm-crditnote.png"
+  title="Create Debit Note confirmation"
+  description="Confirmation prompt showing total units to remove before finalizing."
+/>
+
+<Note>
+Once created, the debit note is finalized and the selected stock is deducted from your inventory immediately. This cannot be reversed. If you need the stock back, you'll need to add it again through a purchase.
+</Note>
+
+The newly created debit note appears in **Billing Notes → Debit Notes**, where you can track its status.
+
+---
+
+## Mistakes to Avoid
+
+<Warning title="Leaving required fields empty">
+**Batch**, **Expiry**, **Cost**, **MRP**, and at least one GST rate (**CGST**, **SGST**, or **IGST**) are mandatory for each drug row. Missing any of these will block submission with an error.
+</Warning>
+
+<Warning title="Assuming a debit note can be edited after creation">
+Once confirmed, the stock is deducted immediately and cannot be added back automatically. If you need the stock again, it has to be re-added through a purchase.
+</Warning>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Trash"
+    description="Track debit notes raised and credit notes received."
+    href="/docs/inventory/billing-notes"
+    icon="FileText"
+  />
+</Cards>

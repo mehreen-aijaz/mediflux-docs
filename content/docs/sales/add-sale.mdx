@@ -1,0 +1,260 @@
+---
+title: Add Sale
+description: Create retail or wholesale sale bills, record payments, add drugs, and manage prescriptions, all from one screen.
+icon: ShoppingCart
+---
+
+The **Add Sale** page is where you create every sale bill in MediFlux. It supports both **Retail** and **Wholesale** billing, with each mode having its own layout and columns tailored to that type of sale.
+
+Navigate here from the sidebar: **Sales → Add Sale**, or click the **`+` button** in the top-right corner of any screen and select **Add Sale**.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783667691457-737999321-addsale-sidebar.png"
+  title="Add Sale"
+  description="Add sale from sidebar."
+/>
+---
+
+## Scan options
+
+MediFlux offers two quick ways to add drugs to your bill without manual searching or typing:
+
+| Option | What it does |
+| --- | --- |
+| **Barcode Scanner** | Scan drug barcodes to instantly add items to the bill |
+| **Image (OCR)** | Upload or photograph a prescription — MediFlux reads the text and populates drugs automatically |
+
+If you have a **barcode scanner device** connected to your system, simply scan drug barcodes and each item is added instantly with auto-populated name, batch, expiry, MRP, and available stock. No additional clicks needed — scanning is automatic.
+
+If you're using your **phone or tablet**, click **Scan** at the top of the page to open the scanner panel. From there, choose **Barcode Scanner** to use your phone camera, or **Image (OCR)** to upload prescriptions, drug lists, or invoices for automatic text recognition and drug extraction.
+
+<Figure
+  src="/images/add-sale-scan-options.png"
+  title="Scan options"
+  description="Choose between Barcode Scanner or Image (OCR) when using a phone or tablet."
+/>
+
+<Note>
+Camera permissions are required for phone-based barcode scanning. Image (OCR) works with file uploads without camera access.
+</Note>
+
+For detailed setup instructions, supported devices, OCR best practices, and troubleshooting, see the [Scan & OCR](/docs/sales/scan-and-ocr) guide.
+---
+## Retail vs Wholesale
+
+At the top-right of the page, two buttons let you switch between billing modes:
+
+- **Retail:** for individual customer sales, walk-in patients, and prescription billing
+- **Wholesale:** for bulk sales to other pharmacies or businesses
+
+Both modes share the same core structure but have different fields and columns in the drug table.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783672878163-99795078-sale-toggle-buttons.png"
+  title="Retail/Wholesale toggle"
+  description="Switch between Retail and Wholesale billing modes."
+/>
+
+---
+
+## Drafts
+
+Click **Drafts** at the top-right to access all saved draft bills. Any bill you save mid-way using **Save Draft** is stored here and can be resumed at any time.
+
+<Note>
+If you are in the middle of adding a sale, whether uploading a prescription or entering drugs manually, and need to navigate away, click **Save Draft** to save your progress. You can return to it anytime from Drafts.
+</Note>
+
+---
+
+## Retail billing
+
+### Left panel
+
+The left panel in Retail mode has three options:
+
+| Option | What it does |
+| --- | --- |
+| **Add Customer [^C]** | Search for an existing customer or quickly add a new one. Shows **Currently Cash Sale** when no customer is selected |
+| **Stock Issue Bill** | Switch to a Stock Issue bill for internal inventory reduction |
+| **Local Sale (CGST/SGST)** | Toggle between Local Sale (CGST+SGST tax) and Out of State (IGST tax) |
+
+#### Adding a customer
+
+Click **Add Customer** or press `Ctrl+C` to open the **Quick Add Customer** dialog. Search for an existing customer by name, phone, or Aadhaar number.
+
+If the customer doesn't exist, press `Tab` or `Enter` to open a quick registration form:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Name** | Yes | Customer's full name |
+| **Phone** | Yes | Contact number |
+| **Address** | Yes | Customer's address |
+| **State** | Yes | Customer's state |
+| **Gender** | No | M / F / O |
+| **Age** | No | Customer's age |
+| **Aadhaar** | No | 12-digit Aadhaar number |
+| **PMJAY / Ayushman Bharat Customer** | No | Tick if this is a PMJAY beneficiary |
+
+Click **Save Customer** to create the profile and link them to the sale instantly.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783673004707-142144523-customer-dialog.png"
+  title="Quick Add Customer — search"
+  description="Search for an existing customer by name, phone, or Aadhaar."
+/>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783673073047-275379112-customer-form.png"
+  title="Quick Add Customer — new customer form"
+  description="Quick registration form for adding a new customer on the fly."
+/>
+
+### Right panel — Doctor details (Retail only)
+
+| Field | Description |
+| --- | --- |
+| **Doctor who prescribed** | Name of the prescribing doctor |
+| **Doctor License No** | Doctor's license number |
+| **OPD / Case Number** | OPD or case number for this prescription |
+
+### Payment status
+
+Select the payment status for this sale:
+
+| Status | Description |
+| --- | --- |
+| **Paid** | Full payment received |
+| **Unpaid** | No payment received yet |
+| **Partial** | Partial payment received |
+
+When **Paid** or **Partial** is selected, additional fields appear:
+
+| Field | Description |
+| --- | --- |
+| **Payment Method** | Cash (default for Retail) |
+| **Paid Amount** | Amount received |
+| **Discount %** | Overall discount on the bill |
+
+### Drug table (Retail)
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Serial number |
+| **Type** | Drug type: Rx, NRx, H1 |
+| **Drug** | Drug name |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date |
+| **QTY** | Quantity sold |
+| **TABS** | Number of tablets/units |
+| **MRP** | Maximum Retail Price |
+| **DISC%** | Discount percentage |
+| **Total** | Line item total |
+
+Click the **grid icon (⊞)** at the bottom of the table to add more drug rows.
+
+---
+
+## Wholesale billing
+
+### Left panel
+
+| Option | What it does |
+| --- | --- |
+| **Sale Mode (Shift+S to toggle)** | Toggle between normal sale mode and Challan mode |
+| **Local Sale (CGST/SGST) / Out of State (IGST)** | Toggle between local tax (CGST+SGST) and inter-state tax (IGST) |
+
+### Customer and salesperson
+
+| Field | Description |
+| --- | --- |
+| **Customer Details** | Search and select the customer for this wholesale sale |
+| **Select Salesperson (Optional)** | Assign a salesperson to this sale for tracking and reporting |
+
+### Drug table (Wholesale)
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Serial number |
+| **Type** | Drug type: Rx, NRx, H1 |
+| **Drug** | Drug name |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date |
+| **HSN** | HSN code of the drug |
+| **Units** | Number of units per pack |
+| **QTY** | Quantity sold |
+| **FREE** | Free/bonus units given with this sale |
+| **Rate** | Sale rate per unit |
+| **MRP** | Maximum Retail Price |
+| **DIS%** | Discount percentage |
+| **CGST% / IGST%** | Tax percentage depending on sale mode |
+| **Subtotal** | Line item subtotal before tax |
+| **Total** | Final line item total |
+
+---
+
+## Additional notes
+
+Both Retail and Wholesale forms have an **Additional Notes** field at the bottom for entering specific instructions, clinical notes, or delivery remarks.
+
+---
+
+## Prescription management & documents (Retail)
+
+If the customer has a physical prescription, you can upload it directly instead of manually entering each drug line by line. MediFlux will scan the prescription and fill in the drug details automatically, saving you time and reducing manual errors.
+
+Click **+ Upload Prescription** to attach a scanned or photographed prescription. Once uploaded, the drugs from the prescription are read and added to the bill automatically.
+
+You can also attach any additional supporting documents, reports, referral letters, or delivery notes, using **+ Add More Files**.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783673157080-283231976-upload-prescription.png"
+  title="Prescription Management"
+  description="Upload prescriptions and attach supporting documents to the sale."
+/>
+
+---
+
+## Bill summary bar
+
+At the bottom of the page, a fixed summary bar shows a live breakdown of the bill:
+
+**Sub Total − Disc + Tax = Bill**
+
+---
+
+## Saving and submitting
+
+| Button | What it does |
+| --- | --- |
+| **Save Draft** | Saves the bill as a draft so you can resume it later from Drafts |
+| **+ Add** | Finalises and saves the sale bill |
+
+---
+
+## Price comparison
+
+Once you select a drug and a customer, a hint appears at the bottom of the drug table:
+
+> Click on a drug and select a customer to view sale history and price comparison
+
+This helps you quickly check what price this drug was previously sold to this customer.
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Add credit note"
+    description="Issue a credit note against an existing sale."
+    href="/docs/sales/add-credit-note"
+    icon="FilePlus"
+  />
+  <Card
+    title="Returned"
+    description="View and manage items returned by customers."
+    href="/docs/sales/returned"
+    icon="RotateCcw"
+  />
+</Cards>

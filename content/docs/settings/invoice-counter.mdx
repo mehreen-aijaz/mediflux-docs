@@ -1,0 +1,117 @@
+---
+title: Invoice Counter
+description: Configure invoice numbering format, counters, and auto-reset behavior for sales and purchases.
+icon: Hash
+---
+
+The **Invoice Counter** tab controls how invoice numbers are generated across MediFlux — the prefix, numbering format, date components, and whether the counter resets periodically. Sales and Purchases have their own independent settings, so you can configure each separately.
+
+<Figure
+  src="/images/invoice-counter-page.png"
+  title="Invoice Counter"
+  description="Configure invoice numbering format, counters, and auto-reset behavior for sales and purchases."
+/>
+
+---
+
+## Sale Settings and Purchase Settings
+
+At the top of the page, two tabs let you configure invoice numbering separately for **Sale Settings** and **Purchase Settings**. Both have the same fields, but changes to one don't affect the other.
+
+<Figure
+  src="/images/invoice-counter-tabs.png"
+  title="Sale Settings and Purchase Settings"
+  description="Toggle between Sale Settings and Purchase Settings tabs to configure each independently."
+/>
+
+---
+
+## Basic Settings
+
+| Field | Description |
+| --- | --- |
+| **Prefix** | Optional starting text for invoice numbers (e.g., INV, PUR, SAL) |
+| **Counter Start** | The number the counter begins at. Cannot be changed once invoices have been generated |
+| **Current Counter** | The current counter value, updated automatically as invoices are created (read-only) |
+| **Counter Padding** | Number of digits used in the counter, from 1–10 (e.g., padding of 5 shows as 00001) |
+
+---
+
+## Date Settings
+
+| Field | Description |
+| --- | --- |
+| **Include Date in Invoice Number** | Adds a date component to your invoice numbering |
+| **Date Format** | DDMMYYYY, MMYYYY, YYYY, or None |
+| **Separator** | Character used to separate parts of the invoice number (e.g., -, /, _) |
+
+<Figure
+  src="/images/invoice-counter-date-format.png"
+  title="Date Format Dropdown"
+  description="Choose from DDMMYYYY, MMYYYY, YYYY, or None for your invoice numbering."
+/>
+
+---
+
+## Auto-Reset Counter
+
+| Field | Description |
+| --- | --- |
+| **Enable Auto-Reset** | Automatically resets the counter back to its start value on a schedule |
+| **Reset Period** | Daily, Monthly, Yearly, or Never |
+
+<Figure
+  src="/images/invoice-counter-reset-period.png"
+  title="Reset Period Dropdown"
+  description="Set the counter to reset Daily, Monthly, Yearly, or Never."
+/>
+
+<Note>
+Auto-reset is useful if you want your invoice numbers to restart each year or month (e.g., starting fresh at 001 every January), rather than counting up indefinitely.
+</Note>
+
+---
+
+## Live Preview and Configuration Summary
+
+As you adjust these settings, a **Live Preview** on the right shows what your next invoice number will look like. Below it, a **Configuration Summary** shows your current **Format**, **Next Invoice** number, and **Auto-Reset** status at a glance.
+
+Click **Save Settings** to apply your changes. The button shows how many fields have been modified, and displays **No Changes** when nothing's been edited.
+
+<Figure
+  src="/images/invoice-counter-live-preview.png"
+  title="Live Preview and Configuration Summary"
+  description="See your next invoice number and current configuration at a glance."
+/>
+
+---
+
+## FAQs
+
+**Can I change the Counter Start after invoices have already been generated?**
+No, Counter Start becomes read-only once invoices exist, to prevent numbering conflicts with invoices already issued.
+
+**Do Sales and Purchases share the same invoice counter?**
+No, each has its own independent settings under the Sale Settings and Purchase Settings tabs.
+
+**What happens if I enable Auto-Reset with a Yearly period?**
+Your counter will automatically reset back to the Counter Start value at the beginning of each year.
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Notifications"
+    description="Manage notification preferences."
+    href="/docs/settings/notifications"
+    icon="Bell"
+  />
+  <Card
+    title="Bill Templates"
+    description="Customize how your bills and invoices look."
+    href="/docs/settings/bill-templates"
+    icon="FileText"
+  />
+</Cards>
