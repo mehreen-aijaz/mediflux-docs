@@ -1,0 +1,95 @@
+---
+title: Data Management
+description: Permanently delete all transactional data from your store to start fresh.
+icon: Database
+---
+
+The **Data Management** tab gives you a single, irreversible action: permanently deleting all transactional data from your store. This is meant for stores that want a completely fresh start, or that have finished a testing phase and want to clear out test data before going live.
+
+<Note>
+This is a destructive, permanent action. Read this page carefully before using it.
+</Note>
+
+---
+
+## Danger Zone
+
+Clearing your data performs a **permanent deletion** of all transactional records.
+
+### What will be deleted
+
+|  |  |
+| --- | --- |
+| All Sales & Invoices | All Purchase Records |
+| Inventory & Stock History | Customer & Supplier Ledgers |
+| AI Assistant Conversations | Prescription History |
+| Order Management Data | Financial Reports |
+
+### What is NOT deleted
+
+Your **login credentials** and **store settings** are not affected — only transactional data is deleted.
+
+<Figure
+  src="/images/data-management-danger-zone.png"
+  title="Danger Zone"
+  description="Overview of what will be deleted and what remains untouched."
+/>
+
+<Figure
+  src="/images/data-management-what-deleted.png"
+  title="What Will Be Deleted"
+  description="Complete list of transactional data types that will be permanently removed."
+/>
+
+---
+
+## Deleting all data
+
+Click **Delete All Data** to begin. A confirmation dialog asks you to type the phrase **delete my data** exactly to proceed.
+
+> To confirm you want to delete all data, including all inventory, sales, purchases, customers, suppliers, and ledgers, type the following phrase:
+> **delete my data**
+
+Once typed correctly, click **Delete Data** to confirm.
+
+<Figure
+  src="/images/data-management-confirmation.png"
+  title="Delete All Data Confirmation"
+  description="Type 'delete my data' to confirm permanent deletion of all transactional records."
+/>
+
+<Note>
+This action is irreversible and cannot be undone. Once confirmed, all your transactional records are permanently deleted — there is no way to recover them afterward.
+</Note>
+
+---
+
+## FAQs
+
+**Will deleting all data affect my login or store settings?**
+No, only transactional data is deleted. Your login credentials, store profile, and settings configured elsewhere remain untouched.
+
+**Can I undo Delete All Data after confirming it?**
+No, this action is permanent and cannot be reversed once confirmed.
+
+**Why would I use this feature?**
+It's designed for stores that have been using MediFlux for testing and want to clear out test data before going live, or for stores that want to start completely fresh.
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Subscriptions"
+    description="View and manage your MediFlux subscription plan."
+    href="/docs/settings/subscriptions"
+    icon="CreditCard"
+  />
+  <Card
+    title="Accounting Settings"
+    description="Configure accounting-related preferences."
+    href="/docs/settings/accounting-settings"
+    icon="Landmark"
+  />
+</Cards>

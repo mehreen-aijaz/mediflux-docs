@@ -1,22 +1,160 @@
 ---
 title: Clinic Module
-description: Manage clinic workflows, appointments, and pharmacy-clinic integrations.
-icon: Stethoscope
+description: Manage doctor profiles, prescriptions, schedules, and appointments for your in-store clinic, all from one place.
+icon: Hospital
 ---
 
-The Clinic Module extends MediFlux to support clinic operations alongside pharmacy management. Coordinate appointments, patient visits, and dispensing workflows when your organization runs both clinical and retail pharmacy services.
+The **Clinic** section brings your pharmacy's clinical side into MediFlux — the doctors who consult at or are associated with your store, the prescriptions they write, when they're available, and the appointments booked with them. If your pharmacy runs a clinic alongside its retail counter, this is where that side of the business is managed.
 
-## Overview
+---
 
-This module connects clinic activity with inventory and sales so prescriptions and clinical services stay aligned with your pharmacy operations.
+## What you can do in Clinic
 
-## Key Capabilities
+- Maintain a directory of doctors — store qualifications, specialities, registration numbers, and contact details for every doctor associated with your clinic
+- Search and filter doctors — quickly find a doctor by name, phone, email, registration number, qualification, or speciality
+- Track prescriptions — keep a record of prescriptions issued by your doctors
+- Set doctor schedules — define when each doctor is available, so appointments only get booked into open slots
+- Manage appointments — track every appointment booked with a doctor at your clinic
+- Review pending bookings — confirm or reject new booking requests before they become scheduled appointments
 
-- **Clinic Profiles** — Configure clinic locations and service offerings
-- **Appointments** — Schedule and manage patient visits
-- **Prescription Flow** — Link clinical prescriptions to pharmacy dispensing
-- **Integrated Reporting** — Review clinic and pharmacy activity together
+---
 
-<Callout type="info">
-  More clinic module guides will be added here as documentation is expanded.
-</Callout>
+## Navigating the Clinic section
+
+The **Clinic** section in the left sidebar expands into five pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Doctors** | Your directory of every doctor associated with the clinic — search, filter by qualification or speciality, and manage individual profiles |
+| **Prescriptions** | Every prescription issued by your doctors, kept on record and linked back to the doctor who wrote it |
+| **Schedules** | Set when each doctor is available, so appointments can only be booked into open time slots |
+| **Appointments** | A running log of every appointment booked with a doctor at your clinic |
+| **Pending Bookings** | New booking requests waiting on your confirmation before they turn into scheduled appointments |
+
+<Figure
+  src="/images/clinic-sidebar.png"
+  title="Clinic Sidebar Navigation"
+  description="The Clinic section in the sidebar expands to show Doctors, Prescriptions, Schedules, Appointments, and Pending Bookings."
+/>
+
+---
+
+## Doctors
+
+The **Doctors** page is your complete doctor directory. View all associated doctors with their qualifications, specialities, registration numbers, and contact details. Search by name, phone, email, or registration number. Filter by qualification or speciality. Click any doctor to view their full profile, prescription history, and schedule.
+
+<Figure
+  src="/images/clinic-doctors-overview.png"
+  title="Doctors"
+  description="Complete doctor directory with search, filters, and detailed profiles."
+/>
+
+---
+
+## Prescriptions
+
+The **Prescriptions** page keeps a record of every prescription issued by your doctors. Each prescription is linked back to the doctor who wrote it and the patient it was for. Search by patient name, doctor, or date. View prescription details including medicines prescribed, dosage instructions, and issue date.
+
+<Figure
+  src="/images/clinic-prescriptions-overview.png"
+  title="Prescriptions"
+  description="Track all prescriptions issued by your clinic's doctors, linked to patients and doctors."
+/>
+
+---
+
+## Schedules
+
+The **Schedules** page lets you define when each doctor is available for appointments. Set recurring weekly slots, add one-off availability, or block out leave days. Appointments can only be booked into open time slots, preventing double-booking and ensuring patients see accurate availability.
+
+<Figure
+  src="/images/clinic-schedules-overview.png"
+  title="Schedules"
+  description="Set doctor availability with recurring slots and blocked leave days."
+/>
+
+---
+
+## Appointments
+
+The **Appointments** page is a running log of every appointment booked with a doctor at your clinic. View upcoming and past appointments with patient details, doctor, time slot, and status. Search by patient name, doctor, or date. Filter by status — confirmed, completed, cancelled, or no-show.
+
+<Figure
+  src="/images/clinic-appointments-overview.png"
+  title="Appointments"
+  description="Track all booked appointments with patient details, doctors, and time slots."
+/>
+
+---
+
+## Pending Bookings
+
+The **Pending Bookings** page shows new appointment requests waiting for your confirmation. Review each request, check patient details and preferred time slots, and choose to **Confirm** or **Reject**. Once confirmed, bookings move to the Appointments page as scheduled.
+
+<Figure
+  src="/images/clinic-pending-bookings-overview.png"
+  title="Pending Bookings"
+  description="Review and confirm or reject new appointment requests before they are scheduled."
+/>
+
+---
+
+## Doctor status
+
+Every doctor profile carries a **Status**, shown as **Active** on their profile. This reflects whether the doctor is currently associated with your clinic and available to be scheduled, prescribed against, or booked for appointments.
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="Do I need to run a clinic to use MediFlux?">
+    No. The Clinic section is optional and only relevant if your pharmacy has doctors consulting on-site or associated with your store. If you're purely retail, you can ignore this section entirely.
+  </Accordion>
+  <Accordion title="Can a doctor log into MediFlux themselves?">
+    When adding a doctor, you have the option to create a user account for them, which would allow them to log in. This is configured from the Add Doctor form.
+  </Accordion>
+  <Accordion title="What's the difference between Appointments and Pending Bookings?">
+    Pending Bookings are new requests that haven't been confirmed yet. Once confirmed, they move to Appointments as scheduled.
+  </Accordion>
+  <Accordion title="Can I remove a doctor from the clinic?">
+    Yes, doctor profiles can be deleted from the Doctors page. Keep in mind this may affect historical records like prescriptions and appointments linked to that doctor.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<WideCards>
+  <WideCard
+    title="Doctors"
+    description="Manage your clinic's doctor directory."
+    href="/docs/clinic/doctors"
+    icon="Stethoscope"
+  />
+  <WideCard
+    title="Prescriptions"
+    description="View and manage prescriptions issued by your doctors."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+  <WideCard
+    title="Schedules"
+    description="Set when each doctor is available for appointments."
+    href="/docs/clinic/schedules"
+    icon="Calendar"
+  />
+  <WideCard
+    title="Appointments"
+    description="View and manage scheduled appointments."
+    href="/docs/clinic/appointments"
+    icon="CalendarCheck"
+  />
+  <WideCard
+    title="Pending Bookings"
+    description="Confirm or reject new booking requests."
+    href="/docs/clinic/pending-bookings"
+    icon="Clock"
+  />
+</WideCards>

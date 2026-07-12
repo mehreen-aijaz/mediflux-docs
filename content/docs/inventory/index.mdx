@@ -1,22 +1,155 @@
 ---
 title: Inventory
-description: Track stock levels, batches, expiry dates, and multi-location inventory.
-icon: Box
+description: Manage your drug inventory, track stock levels, monitor expiries, and keep your pharmacy's stock accurate, all from one place.
+icon: Pill
 ---
 
-The Inventory section of MediFlux gives you real-time visibility into what is on hand across your pharmacy locations. Monitor stock levels, batch numbers, expiry dates, and reorder thresholds from a single dashboard.
+The **Inventory** section (labelled **Drugs** in the sidebar) is where you manage every medicine and stock item your pharmacy holds. It shows you how many units you have, what they cost, when they expire, which supplier they came from, and lets you keep this information accurate as stock moves in and out of your store.
 
-## Overview
+---
 
-Inventory updates automatically when sales, purchases, returns, and adjustments are recorded. This keeps your on-hand quantities accurate without manual spreadsheet work.
+## What you can do in Inventory
 
-## Key Capabilities
+- **View your complete drug inventory:** stock levels, batch numbers, HSN codes, trade price, MRP, and expiry, all in one list
+- **Track stock value:** see your total inventory value and cost at a glance
+- **Monitor expired and out-of-stock drugs:** stay on top of stock that needs attention
+- **Update drug details:** correct batch numbers, rack numbers, stock, tax rates, and more
+- **Reorder drugs:** send a purchase order directly to a connected supplier
+- **Raise debit notes:** request a return to your supplier for a purchased drug
+- **Share your catalog:** generate secure, time-limited links to share your stock list with partners or customers
+- **Import your inventory in bulk:** upload a CSV or Excel file to add drugs quickly, useful when setting up MediFlux for the first time
+- **Export inventory data:** download your drug list for accounting and record-keeping
 
-- **Stock Tracking** — View current quantities by product and location
-- **Batch & Expiry** — Manage lot numbers and expiry-driven picking rules
-- **Low Stock Alerts** — Get notified when items fall below reorder points
-- **Adjustments** — Record damage, shrinkage, and manual corrections with audit trails
+---
 
-<Callout type="info">
-  More inventory guides will be added here as documentation is expanded.
-</Callout>
+## Navigating the Inventory section
+
+The **Drugs** section in the left sidebar expands into five pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Drug List** | View, search, and manage all the drugs in your inventory |
+| **Catalog Share** | Generate secure, time-limited links to share your product catalog with partners or customers |
+| **Create Debit Note** | Raise a debit note to a supplier to request a return on a purchased drug |
+| **Billing Notes** | Track the debit notes you've raised to suppliers and the credit notes issued back to you |
+| **Trash** | Recover drugs that have been deleted from inventory |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783585798159-674676454-inventory-sidebar.png"
+  title="Drugs sidebar navigation"
+  description="Sidebar showing Drug List, Catalog Share, Billing Notes, Create Debit Note, and Trash."
+/>
+
+---
+
+## Quick actions from the dashboard
+
+Inventory doesn't have a dedicated "Add Drug" quick action. Instead, drugs are added to your inventory when you record a purchase. The **Add Purchase** option in the **`+` quick-add menu** (top-right corner of any screen) lets you add drugs bought from a supplier, and they'll automatically reflect in your inventory.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783585866248-298967115-add-purchase.png"
+  title="Dashboard + menu"
+  description="Add Purchase option in the quick-add menu."
+/>
+
+<Note>
+To manually update an existing drug's details, like stock, batch, or tax rates, use the **Update** action from the Drug List instead. New drugs are added through purchases, not directly from Inventory.
+</Note>
+
+---
+
+## Drug types
+
+Every drug in your inventory is classified under a **Type**:
+
+| Type | Meaning |
+| --- | --- |
+| **Rx** | Prescription required |
+| **NRx** | Non-prescription (over-the-counter) |
+| **H1** | Schedule H1 drug, subject to additional regulatory tracking |
+
+You can filter your Drug List by type at any time.
+
+---
+
+## Drug List
+
+The **Drug List** is your central inventory view. Search and filter drugs by name, composition, stock status, or expiry. View key details at a glance including current stock, MRP, trade price, batch number, and supplier. Update drug information, adjust stock levels, and reorder directly from the list.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783591392140-456868780-drugListOverview.png"
+  title="Drug List"
+  description="Complete inventory view with search, filters, and drug details."
+/>
+
+---
+
+## Catalog Share
+
+**Catalog Share** lets you generate secure, time-limited links to share your product catalog with partners, customers, or other stakeholders. They can view your available stock without accessing your MediFlux account. Set expiry dates on links and revoke access anytime.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783591502202-659561370-catalogOverview.png"
+  title="Catalog Share"
+  description="Generate and manage secure shareable catalog links."
+/>
+
+---
+
+## Billing Notes
+
+**Billing Notes** tracks all debit notes you've raised to suppliers and credit notes you've received back. View status, amounts, and settlement details in one place. Filter by date, supplier, or note type to stay on top of returns and adjustments.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783591672463-546108573-billingNotesoverview.png"
+  title="Billing Notes"
+  description="Track debit notes raised and credit notes received from suppliers."
+/>
+
+---
+## Create Debit Note
+
+When you need to return a drug to your supplier — due to expiry, damage, or overstock — use **Create Debit Note**. Select the drug, specify the quantity and reason, and send the debit note directly to the supplier. This automatically adjusts your inventory and supplier ledger.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783591766407-581572982-debitnoteoverview.png"
+  title="Create Debit Note"
+  description="Raise a debit note to request a return from your supplier."
+/>
+---
+
+## Trash
+
+Deleted drugs aren't gone forever. The **Trash** page holds all inventory items that have been removed, so you can restore them if needed. View deletion history, check associated stock and batch details, and restore drugs back to active inventory with one click.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783591862429-549002883-trashOverview.png"
+  title="Trash"
+  description="Recover deleted drugs and view deletion history."
+/>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Drug List"
+    description="View, search, and manage all the drugs in your inventory."
+    href="/docs/inventory/drug-list"
+    icon="List"
+  />
+  <Card
+    title="Catalog Share"
+    description="Generate secure, time-limited links to share your product catalog."
+    href="/docs/inventory/catalog-share"
+    icon="Share2"
+  />
+  <Card
+    title="Create Debit Note"
+    description="Raise a debit note to a supplier to request a return."
+    href="/docs/inventory/create-debit-note"
+    icon="FileMinus"
+  />
+  
+</Cards>

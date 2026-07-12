@@ -1,4 +1,4 @@
 {
   "title": "Customers",
-  "pages": ["index"]
+  "pages": ["index", "customer-list", "add-customer", "customer-profile","customer-ledger","store-request","billing-notes","customer-trash"]
 }

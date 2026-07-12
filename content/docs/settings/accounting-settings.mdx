@@ -1,0 +1,94 @@
+---
+title: Accounting Settings
+description: Manage your accounting module's financial year status, including temporary locking.
+icon: Landmark
+---
+
+The **Accounting Settings** tab lets you control the status of your current financial year — whether it's open for edits or temporarily locked to prevent further changes.
+
+---
+
+## Financial Year Settings
+
+This section shows your **Current Status**:
+
+| Status | Meaning |
+| --- | --- |
+| **Open** | The financial year is currently active, and accounting entries can be edited freely |
+
+### Important Precautions
+
+- You can still edit accounting entries while the year is open
+- Locking will prevent any further changes
+- Closing will permanently finalize the year
+
+<Figure
+  src="/images/accounting-settings-financial-year.png"
+  title="Financial Year Settings"
+  description="View and manage your current financial year status."
+/>
+
+<Note>
+Permanently closing a financial year is managed separately within the **Accounting** module, not here. This tab only covers temporary locking.
+</Note>
+
+---
+
+## Temporarily locking the financial year
+
+<Steps>
+  <Step title="Open the confirmation dialog">
+    Click **Temporary Lock Financial Year** to open a confirmation dialog.
+  </Step>
+  <Step title="Review the details">
+    > **Temporarily Lock Financial Year**
+    > Temporary locking prevents further edits but allows manual entries. This can be unlocked by an administrator.
+
+    **Temporary locking will:**
+    - Prevent editing existing entries
+    - Allow manual entries only
+    - Still allow permanent locking or closing
+  </Step>
+  <Step title="Confirm or cancel">
+    Click **Temporary Lock Year** to confirm, or **Cancel** to back out.
+  </Step>
+</Steps>
+
+<Figure
+  src="/images/accounting-settings-lock-dialog.png"
+  title="Temporarily Lock Financial Year dialog"
+  description="Confirm temporary lock to restrict editing on existing entries."
+/>
+
+<Note>
+Temporary locking can be reversed by an administrator, unlike permanently closing a financial year, which is final.
+</Note>
+
+---
+
+## FAQs
+
+<Accordions>
+  <Accordion title="What's the difference between temporarily locking and permanently closing a financial year?">
+    Temporary locking prevents edits to existing entries but still allows manual entries, and can be undone by an administrator. Permanently closing the year finalizes it completely and is managed within the Accounting module.
+  </Accordion>
+  <Accordion title="Can I still make entries after temporarily locking the financial year?">
+    Yes, manual entries are still allowed, but existing entries can no longer be edited.
+  </Accordion>
+  <Accordion title="Who can unlock a temporarily locked financial year?">
+    An administrator can unlock it.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Referrals"
+    description="Manage your referral settings and configurations."
+    href="/docs/settings/referrals"
+    icon="Gift"
+  />
+</Cards>   

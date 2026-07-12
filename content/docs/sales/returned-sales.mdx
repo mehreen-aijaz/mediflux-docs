@@ -1,0 +1,131 @@
+---
+title: Returned
+description: View all returned sales and process returns directly from the Sales List.
+icon: CornerUpLeft
+---
+
+The **Returned** page shows a complete record of every sale that has been returned in your pharmacy. Each entry is linked to the original sale and customer, making it easy to track what was returned, when, and how much was credited.
+
+Navigate here from the sidebar: **Sales → Returned**.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783674201991-896236346-returned-sidebar.png"
+  title="Returned Sales"
+  description="Navigate to returned sales from sidebar."
+/>
+
+---
+
+## How to return a sale
+
+You can initiate a return directly from the **Sales List** without navigating away. Click the **three-dot menu (⋮)** on any sale row and select **Return Sale**.
+
+A confirmation dialog appears showing:
+
+- The customer name and sale number
+- Current outstanding balance for this sale
+- A warning that **this action cannot be undone**. All drugs in the sale will be returned to inventory
+
+You'll also need to confirm whether a refund was initiated:
+
+| Field | Description |
+| --- | --- |
+| **Refund Initiated?** | Select **Yes** if you are refunding money to the customer, or **No** if no refund is being given |
+| **Refund Amount (₹)** | The amount being refunded to the customer |
+| **Receipt Number** | Optional receipt or reference number for this return |
+
+Click **Return Sale** to confirm, or **Cancel** to go back.
+
+Once confirmed, a **"Sale returned successfully!"** message appears and the returned sale is recorded in the Returned page. All drugs from the sale are automatically added back to your inventory.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783674321947-610601324-return-dialog.png"
+  title="Return Sale confirmation dialog"
+  description="Customer name, sale number, outstanding balance, and refund details."
+/>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783674383467-370234699-returned-sale-selected.png"
+  title="Sale returned successfully"
+  description="Toast message confirming the return has been processed."
+/>
+
+<Note>
+Returning a sale cannot be undone. All drugs in the sale are returned to inventory immediately. Make sure the details are correct before confirming.
+</Note>
+
+---
+
+## Viewing returned sales
+
+Each return is displayed as a card showing:
+
+| Detail | Description |
+| --- | --- |
+| **Invoice number** | The original sale invoice number |
+| **Returned badge** | A purple **Returned** tag confirming this sale has been returned |
+| **Customer name** | The customer the original sale was made to |
+| **Payment method** | Payment method used in the original sale |
+| **Date and time** | When the return was processed |
+| **Items count** | Number of items in the return |
+
+The page shows a **Found X** count above the list indicating how many returns are recorded.
+
+<Figure
+  src="/images/returned-list.png"
+  title="Returned page"
+  description="List of returned sales with invoice numbers, customer names, and return details."
+/>
+
+---
+
+## Expanding a return
+
+Click the **chevron (▾)** on the right of any return card to expand it and see the full line item breakdown:
+
+| Column | Description |
+| --- | --- |
+| **SR.** | Serial number |
+| **HSN** | HSN code of the drug |
+| **Product** | Name of the returned drug |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date of the batch |
+| **QTY** | Quantity returned |
+| **MRP** | Maximum Retail Price |
+| **Discount (%)** | Discount that was applied |
+| **Total** | Total value of the returned item |
+
+The **Grand Total** is shown at the bottom right of the expanded row.
+
+<Figure
+  src="/images/returned-expanded-row.png"
+  title="Expanded return row"
+  description="Line item breakdown with HSN, product, batch, expiry, quantity, MRP, discount, and total."
+/>
+
+---
+
+## Row action — Print
+
+Clicking the **three-dot menu (⋮)** on any return card gives you one action:
+
+- **Print:** print the return record
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Re-orders"
+    description="View, search, and manage all your recorded sales."
+    href="/docs/sales/sales-list"
+    icon="List"
+  />
+  <Card
+    title="Drafts"
+    description="Issue a credit note against an existing sale."
+    href="/docs/sales/add-credit-note"
+    icon="FilePlus"
+  />
+</Cards>

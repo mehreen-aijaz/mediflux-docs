@@ -1,0 +1,159 @@
+---
+title: Doctors
+description: View and manage doctor profiles, search by qualification or speciality, and add new doctors to your clinic.
+icon: Stethoscope
+---
+
+The **Doctors** page is your directory of every doctor associated with your pharmacy's clinic. It gives you a quick view of each doctor's contact details, qualifications, and specialities, with the ability to search, filter, and manage profiles from one place.
+
+---
+
+## Searching doctors
+
+The search bar lets you search by **name, phone, email, or registration number**. Just start typing and the list filters instantly.
+
+*[Screenshot: Doctors search bar]*
+
+---
+
+## Filtering by qualification and speciality
+
+Two dropdowns next to the search bar let you narrow the list further:
+
+| Filter | What it does |
+| --- | --- |
+| **All Qualifications** | Filter doctors by a specific qualification |
+| **All Specialities** | Filter doctors by a specific speciality |
+
+You can type in either dropdown to search for a qualification or speciality, and select a match from the list.
+
+*[Screenshot: Qualifications and Specialities dropdowns]*
+
+---
+
+## The doctors table
+
+| Column | Description |
+| --- | --- |
+| **Name** | Doctor's name, with their registration number shown below it |
+| **Phone** | Contact number |
+| **Email** | Email address |
+| **Qualification** | Qualifications held by the doctor, shown as tags (e.g., MBBS, MD) |
+| **Speciality** | Speciality or specialities the doctor practices in |
+| **Actions** | Quick action menu for that doctor row |
+
+*[Screenshot: Doctors table]*
+
+---
+
+## Sorting the table
+
+The **Name**, **Qualification**, and **Speciality** columns are sortable. Click the column header to toggle between ascending and descending order.
+
+---
+
+## Row actions
+
+Click the **⋮** menu on any doctor row to:
+
+| Action | What it does |
+| --- | --- |
+| **Edit** | Opens the doctor's profile for editing |
+| **Delete** | Removes the doctor from your clinic |
+
+*[Screenshot: Row actions menu]*
+
+---
+
+## Pagination
+
+At the bottom of the table, you can move between pages and choose how many doctors to display per page using the **Items per page** dropdown.
+
+---
+
+## Viewing a doctor's profile
+
+Click on any doctor's name to open their full profile, showing:
+
+| Section | What it shows |
+| --- | --- |
+| **Header** | Doctor's name, phone, email, who created the profile, and when it was last edited |
+| **Doctor Information** | Registration Number, Phone, Email, and Status |
+| **Qualifications** | All qualifications, shown as tags |
+| **Specialities** | All specialities, shown as tags |
+
+*[Screenshot: Doctor detail page]*
+
+---
+
+## Adding a doctor
+
+Click **+ Add Doctor** at the top of the page to open the **Add New Doctor** form:
+
+*[Screenshot: Add Doctor button]*
+
+## The Doctors form:
+
+| Field | Description |
+| --- | --- |
+| **Full Name** | Doctor's full name, required |
+| **Registration Number** | The doctor's official medical registration number, required |
+| **Phone Number** | Contact number, required |
+| **Email Address** | Contact email, required |
+| **Qualifications** | Comma-separated list of qualifications (e.g., MBBS, MD, MS) |
+| **Specialities** | Comma-separated list of specialities (e.g., Cardiology, Neurology) |
+
+Qualifications and specialities you type in are added to the list and can be searched or filtered by later using the dropdowns on this page.
+
+*[Screenshot: Add New Doctor form]*
+
+### Creating a user account for the doctor
+
+Checking **Create User Account for this Doctor** creates a login for the doctor, allowing them to access MediFlux directly under their own account.
+
+<Note>
+A doctor's login only gives them access to the **Clinic** section — they won't be able to view or manage other parts of MediFlux like Sales, Inventory, or Customers.
+</Note>
+
+Once all required fields are filled in, click **Add Doctor** to save the profile, or **Cancel** to discard it.
+
+---
+
+## FAQs
+
+**Can I search for a doctor by their registration number?**
+Yes, the search bar covers name, phone, email, and registration number, so any of these will work.
+
+**Do I need to fill in Qualifications and Specialities when adding a doctor?**
+No, only Full Name, Registration Number, Phone Number, and Email Address are required. Qualifications and Specialities are optional but recommended, since they let you filter and search doctors more effectively later.
+
+**What happens if I delete a doctor?**
+The doctor is removed from your Doctors list. Records linked to them elsewhere, like prescriptions or appointments, may still reference their name historically.
+
+---
+
+## Common Mistakes to Avoid
+
+- Skipping Qualifications and Specialities — without these, the doctor won't show up when filtering by qualification or speciality
+- Adding a doctor without a correct registration number — this is a required field and is used to identify the doctor
+- Enabling **Create User Account** without informing the doctor — since this gives them direct login access, make sure they're aware and have their credentials
+- Deleting a doctor instead of editing their details when information changes — check **Edit** first before removing a profile
+
+---
+
+## Next steps
+
+<WideCards>
+  <WideCard
+    title="Prescriptions"
+    description="View and manage prescriptions issued by your doctors."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+  <WideCard
+    title="Schedules"
+    description="Set when each doctor is available for appointments."
+    href="/docs/clinic/schedules"
+    icon="Calendar"
+  />
+</WideCards>

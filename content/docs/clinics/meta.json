@@ -1,4 +1,4 @@
 {
   "title": "Clinic Module",
-  "pages": ["index"]
+  "pages": ["index","doctors","prescriptions","schedules","appointments","pending-bookings" ]
 }

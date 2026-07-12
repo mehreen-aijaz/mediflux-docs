@@ -1,0 +1,178 @@
+---
+title: Supplier Profile
+description: View a supplier's complete purchase history, outstanding balance, performance stats, and manage their details from one page.
+icon: User
+---
+
+Clicking on any supplier's name in the Supplier List opens their **Supplier Profile**, a dedicated page showing everything about that supplier in one place. From here you can view their purchase history, track outstanding dues, check margin performance, and take actions like editing details or recording a new purchase.
+
+---
+
+## Profile header
+
+At the top of the page you'll see:
+
+- The supplier's name in large text under the **SUPPLIER** label
+- A small **avatar icon** with a dropdown arrow. Click this to switch to a different supplier without going back to the list
+- **Last edited** timestamp showing when the supplier profile was last updated
+- The supplier's **phone number, address, license number, and GSTIN** displayed on the right side of the header
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578243086-355950905-supplier-profile.png"
+  title="Profile header"
+  description="Supplier name, avatar dropdown, contact details, and last edited timestamp."
+/>
+
+---
+
+## Summary cards
+
+Five stat cards sit below the header giving you a quick performance snapshot of this supplier:
+
+| Card | What it shows |
+| --- | --- |
+| **Total Purchases** | The all-time total amount of purchases made from this supplier |
+| **Outstanding** | The current amount pending payment. Shows **Pending payment** in red if there is a balance due, or `₹0.00` if fully paid |
+| **Total Orders** | Total number of purchase orders placed with this supplier. Shows **Successful deliveries** below |
+| **Units Supplied** | Total units received from this supplier across all purchases. Shows the number of unique drugs below |
+| **Gross Margin %** | The gross margin percentage calculated across all purchases from this supplier |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578355162-272902606-supplier-profile-summaryCards.png "
+  title="Summary cards"
+  description="Five stat cards showing purchase history, outstanding, orders, units, and margin."
+/>
+
+---
+
+## Page-level actions
+
+Three buttons and a menu sit at the top-right of the supplier profile:
+
+| Button | What it does |
+| --- | --- |
+| **Add Purchase** | Create a new purchase entry directly linked to this supplier |
+| **Ledger** | Jump to this supplier's individual ledger |
+| **More** | Opens a dropdown with additional actions |
+
+### Add Purchase
+
+Click **Add Purchase** to create a new purchase entry directly linked to this supplier, without having to search for or select the supplier again in the purchase form.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578533914-740803091-add-purchase-fromSupplier.png"
+  title="Add Purchase"
+  description="Purchase form opened directly from the supplier profile."
+/>
+
+### Ledger
+
+Click **Ledger** to jump straight to this supplier's individual ledger, showing their full transaction history, running balance, and options to add payments, credit notes, or adjustments.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578611268-296048612-supplier-ledger.png"
+  title="Ledger button"
+  description="Quick access to the supplier's transaction ledger."
+/>
+
+### More menu options
+
+| Option | What it does |
+| --- | --- |
+| **Purchases** | View all purchases linked to this supplier |
+| **Edit** | Opens the Update Supplier form to edit the supplier's profile details |
+| **Export Purchases** | Export this supplier's purchase history |
+| **Delete** | Delete this supplier profile |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578675755-493142887-menu-options.png"
+  title="More menu"
+  description="Additional actions available from the dropdown menu."
+/>
+
+---
+
+## Editing a supplier
+
+Click **Edit** from the **More** menu to open the **Update Supplier** form. You can edit Store Name, License Number, GSTIN, Contact Person, Phone Number, Email Address, Website, Address, Notes, and Reliability Score.
+
+<Note>
+The **Opening Balance** field cannot be edited from here. It is locked once the supplier is created. If you need to correct it, create an **Adjustment entry** from the supplier's <a href="/docs/suppliers/ledger">Ledger</a> instead.
+</Note>
+
+Click **Update Supplier** to save your changes, or **Cancel** to discard them.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578739607-566474584-supplier-form.png"
+  title="Update Supplier form"
+  description="Edit supplier details. Opening Balance is disabled and cannot be changed."
+/>
+
+---
+
+## Recent Purchases
+
+Below the summary cards, the **Recent Purchases** table shows the latest purchase entries recorded against this supplier:
+
+| Column | Description |
+| --- | --- |
+| **Date** | Date and time the purchase was recorded |
+| **Invoice** | Invoice number of the purchase |
+| **Drugs** | Number of drug line items in the purchase |
+| **Amount** | Total value of the purchase |
+| **Actions** | Options to View, open Invoice, or Edit the purchase entry |
+
+Click **View More** at the bottom of the table to load older purchase entries.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783578810805-572972557-recent-purchases.png"
+  title="Recent Purchases table"
+  description="Latest purchases with actions menu showing View, Invoice, and Edit options."
+/>
+
+---
+
+## Notes
+
+At the bottom of the profile, the **Notes** section displays any internal remarks entered when the supplier was first created. If no notes were added, it shows **No remarks provided**.
+
+To update the notes, use the **Edit** option from the **More** menu.
+
+---
+
+## Common mistakes to avoid
+
+<Warning title="Trying to edit the Opening Balance from the supplier profile">
+The Opening Balance field is locked in the Edit form and cannot be changed here. If the original amount was wrong, add an **Adjustment entry** from the supplier's <a href="/docs/suppliers/ledger">Ledger</a> instead.
+</Warning>
+
+<Warning title="Deleting a supplier instead of editing them">
+If you only need to update a supplier's details, use **Edit**, not **Delete**. Deleting moves the supplier to <a href="/docs/suppliers/trash">Trash</a>. Although purchase history is preserved, it removes them from your active Supplier List until restored.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="Can I edit a supplier's Opening Balance from their profile?">
+    No. The Opening Balance field is locked once the supplier is saved. To correct it, go to the supplier's <a href="/docs/suppliers/ledger">Ledger</a> and add an <strong>Adjustment entry</strong>.
+  </Accordion>
+  <Accordion title="What happens if I delete a supplier from their profile?">
+    The supplier moves to <a href="/docs/suppliers/trash">Trash</a>. All purchase history and ledger entries are preserved and can be viewed from there. You can restore the supplier at any time.
+  </Accordion>
+  <Accordion title="Why is my Outstanding showing ₹0.00 even though I have purchases?">
+    This means all purchases from this supplier have been fully paid off through payments or credit notes recorded in the <a href="/docs/suppliers/ledger">Ledger</a>.
+  </Accordion>
+  <Accordion title="Can I export a single supplier's purchase history?">
+    Yes. Click <strong>Export Purchases</strong> from the <strong>More</strong> menu to export just this supplier's purchase records.
+  </Accordion>
+</Accordions>
+
+---
+
+## Did you know?
+
+<Callout type="info">
+  You can start a new purchase directly from any supplier profile using the **Add Purchase** button — no need to navigate to the Purchases section or re-select the supplier.
+</Callout>

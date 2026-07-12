@@ -1,0 +1,79 @@
+---
+title: Integrations
+description: Manage external connections and automated workflows, including WhatsApp reports and AI-powered features.
+icon: Link
+---
+
+The **Integrations** tab lets you connect MediFlux with external services and automate certain workflows, like sending reports and invoices over WhatsApp, or enabling AI-powered features using your own API key.
+
+---
+
+## WhatsApp Automations
+
+| Option | What it does |
+| --- | --- |
+| **Daily WhatsApp Reports** | Sends automated daily business reports and summaries via WhatsApp |
+| **Auto Sale Invoice Sending** | Automatically sends sale invoices to customers via WhatsApp when a sale is created |
+| **Auto Payment Message Sending** | Automatically sends payment messages to customers via WhatsApp when a payment is received |
+
+Each option can be toggled on or off independently.
+
+<Figure
+  src="/images/integrations-whatsapp.png"
+  title="WhatsApp Automations"
+  description="Toggle Daily WhatsApp Reports, Auto Sale Invoice Sending, and Auto Payment Message Sending on or off."
+/>
+
+---
+
+## Gemini API Key
+
+To enable AI-powered features in MediFlux, add your own **Gemini API key**. You can get one from **Google AI Studio**.
+
+Enter your key in the field provided, then click **Save**. Use the eye icon to show or hide the key as you type.
+
+<Figure
+  src="/images/integrations-gemini.png"
+  title="Gemini API Key"
+  description="Enter your Gemini API key from Google AI Studio to enable AI-powered features."
+/>
+
+<Note>
+The Gemini API key powers MediFlux's AI-driven features. You'll need your own key from Google AI Studio to use these features.
+</Note>
+
+---
+
+## FAQs
+
+**Do I need a Gemini API key to use MediFlux?**
+No, it's only needed if you want to use AI-powered features. Core MediFlux functionality works without one.
+
+**Will customers be notified automatically if I enable Auto Sale Invoice Sending?**
+Yes, once enabled, sale invoices are sent to customers via WhatsApp automatically whenever a sale is created.
+
+---
+
+## Common Mistakes to Avoid
+
+- Enabling Auto Sale Invoice Sending or Auto Payment Message Sending without confirming your customers have WhatsApp numbers on file — messages won't be delivered without a valid number
+- Sharing your Gemini API key with others — treat it like a password, since it's tied to your own Google account
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="User Management"
+    description="Manage staff accounts and their access."
+    href="/docs/settings/user-management"
+    icon="Users"
+  />
+  <Card
+    title="Data Management"
+    description="Manage your store's data."
+    href="/docs/settings/data-management"
+    icon="Database"
+  />
+</Cards>

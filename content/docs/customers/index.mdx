@@ -1,22 +1,218 @@
 ---
 title: Customers
-description: Manage customer profiles, purchase history, and loyalty programs.
+description: Manage your customers, track outstanding payments, record sales, and maintain billing notes, all from one place.
 icon: Users
 ---
 
-The Customers section of MediFlux helps you maintain patient and customer records linked to sales, prescriptions, and loyalty programs. Keep contact information, preferences, and transaction history in one place.
+The **Customers** section is your central hub for managing everyone your pharmacy sells to. This includes individual consumers, businesses, and other pharmacy stores linked through MediFlux. From adding a new customer profile to tracking outstanding dues and managing billing notes, everything you need to maintain accurate customer accounts is here.
+
+---
 
 ## Overview
 
-Customer profiles connect to your POS workflow so staff can quickly look up accounts, apply discounts, and review past purchases during checkout.
+Customer profiles connect to your sales workflow so staff can quickly look up accounts, record payments, and review past purchases and outstanding balances, all without leaving MediFlux.
 
-## Key Capabilities
+---
 
-- **Customer Profiles** — Store names, contact details, and identifiers
-- **Purchase History** — Review past transactions and returns
-- **Loyalty & Discounts** — Attach programs and membership benefits
-- **Search & Lookup** — Find customers quickly at the point of sale
+## What you can do in Customers
 
-<Callout type="info">
-  More customer guides will be added here as documentation is expanded.
-</Callout>
+- **Maintain a customer directory:** store contact details, GSTIN, license numbers, and ratings for every customer
+- **Track outstanding payments:** see at a glance how much each customer owes you and the total across all customers
+- **View sales history:** every sale is linked to the customer it was made to
+- **Record payments:** mark dues as paid and keep your ledger accurate
+- **Manage billing notes:** record and track credit notes issued to customers and debit notes raised by connected retailers
+- **Accept or reject store link requests:** connect with other pharmacy stores on MediFlux as linked customers
+- **Export customer data:** download customer data as PDF or Excel for accounting and audits
+
+---
+
+## Navigating the Customers section
+
+The **Customers** section in the left sidebar expands into five pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Customer List** | View, search, and manage all your customer profiles |
+| **Ledger** | See a consolidated ledger of all entries across every customer |
+| **Store Requests** | Accept or reject requests from other pharmacy stores wanting to link as a customer |
+| **Billing Notes** | Manage debit notes raised by connected retailers and credit notes issued to customers |
+| **Trash** | Recover removed customer profiles |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659084964-852540645-customer-sidbar.png"
+  title="Customers sidebar navigation"
+  description="Sidebar showing Customer List, Ledger, Store Requests, Billing Notes, and Trash."
+/>
+
+---
+
+## Quick actions from the dashboard
+
+You don't have to navigate to the Customers section to add a customer or record a payment. The **`+` button** in the top-right corner of any screen gives you instant access to the most common actions from anywhere in MediFlux:
+
+- **Add Customer:** create a new customer profile without leaving the dashboard
+- **Add Customer Payment:** record a payment directly without navigating away
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659084961-915579957-customer-quickAdd.png"
+  title="Customers sidebar navigation"
+  description="Sidebar showing Customer List, Ledger, Store Requests, Billing Notes, and Trash."
+/>
+<Note>
+The `+` quick-add menu is available on every screen, not just the dashboard. Use it whenever you need to add a customer or record a payment without breaking your current workflow.
+</Note>
+
+---
+
+## Customer types
+
+MediFlux distinguishes between two types of customers:
+
+**Linked Stores** are other pharmacy stores on the MediFlux platform that you've connected with as a customer. These are typically used when you supply to or transact with another pharmacy. These connections start as a Store Request, which you can accept or reject.
+
+**Local Customers** are individual consumers or businesses you add manually. These are your regular walk-in customers, regular buyers, or local businesses.
+
+When adding a local customer you can choose between two profiles:
+
+**Consumer:** for individual walk-in patients. Supports fields like age, gender, Aadhaar number, and PMJAY/Ayushman Bharat scheme details.
+
+**Business:** for businesses or other pharmacies you supply to. Supports fields like business name, license number, and GSTIN.
+
+You can filter your customer list by type at any time using the **Linked Stores** and **Local Customers** quick-filter chips.
+
+---
+
+## Customer List
+
+The **Customer List** is your complete customer directory. View all your customers at a glance with contact details, outstanding balances, and customer ratings. Search by name, phone, or GSTIN. Filter by linked stores or local customers. Click any customer to view their full profile, sales history, and ledger.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659400339-441793118-customerlist-overview.png"
+  title="Customer List"
+  description="Complete customer directory with search, filters, and performance metrics."
+/>
+
+---
+
+## Ledger
+
+The **Ledger** page gives you a complete financial record of all your customer transactions. View a consolidated ledger across all customers at once, or click into any individual customer to see their dedicated ledger with a running balance. Track sales, payments, credit notes, and manual adjustments. Filter by date range, entry type, and payment method. Export entries as PDF or Excel.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659510887-231343907-customerledger-overview.png"
+  title="Customer Ledger"
+  description="Consolidated and individual customer ledgers with balance tracking."
+/>
+
+---
+
+## Store Requests
+
+The **Store Requests** page shows incoming connection requests from other pharmacy stores on the MediFlux platform who want to link with you as a customer. Review each request, check the requesting store's details, and choose to **Accept** or **Reject**. Once accepted, the store appears as a Linked Store in your Customer List and you can start transacting with them seamlessly.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659729261-409006637-storerequests-overview.png"
+  title="Store Requests"
+  description="Review and manage incoming link requests from other pharmacy stores."
+/>
+
+---
+
+## Billing Notes
+
+The **Billing Notes** page tracks all credit notes you've issued to customers and debit notes raised by connected retailers. View status, amounts, and settlement details in one place. Filter by date, customer, or note type to stay on top of returns and adjustments. This keeps your customer accounts accurate and audit-ready.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659729253-991871219-billingnotes-overview.png"
+  title="Billing Notes"
+  description="Track credit notes issued and debit notes received from customers."
+/>
+
+---
+
+## Trash
+
+Deleted customers aren't gone forever. The **Trash** page holds all customer profiles that have been removed from your system, so you can restore them if needed. View deletion history, check outstanding balances at the time of deletion, and restore customers back to your active directory with one click. All linked sales records and ledger entries are preserved even after deletion.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783659729252-799752974-trash-overview.png"
+  title="Customer Trash"
+  description="Recover deleted customers and view their preserved sales history."
+/>
+
+---
+
+## Common mistakes to avoid
+
+<Warning title="Forgetting to add the Opening Outstanding">
+If a customer already owes you money before you add them to MediFlux, make sure to enter it in the **Opening Outstanding** field when creating their profile. This field cannot be edited after saving. If you forget, correct it through the customer's <a href="/docs/customers/ledger">Ledger</a> using an **Adjustment entry**.
+</Warning>
+
+<Warning title="Skipping GSTIN and License Number for business customers">
+These fields are optional but highly recommended for business customers. Without GSTIN your sales entries will not be GST-ready, which can cause issues when generating GSTR reports.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="What is the difference between a Linked Store and a Local Customer?">
+    A Linked Store is another pharmacy on MediFlux that has connected with you through a Store Request. A Local Customer is anyone you add manually, whether individual consumers or businesses. Both appear in your Customer List and work the same way once added.
+  </Accordion>
+  <Accordion title="Can I add both Consumer and Business profiles?">
+    Yes. When adding a new customer you choose whether they are a Consumer or a Business. Each type has its own set of fields suited to that customer type.
+  </Accordion>
+  <Accordion title="What happens to sales history if I delete a customer?">
+    All sales records and ledger entries are preserved even after a customer is deleted. You can still view them from the Trash page via **View Sales**. Restore the customer at any time to bring them back to your active list.
+  </Accordion>
+  <Accordion title="Can I track how much all my customers owe me at once?">
+    Yes. The Customer List page shows a summary card with the total outstanding amount across all customers. The Ledger page also shows a running total at the bottom of the customer panel.
+  </Accordion>
+  <Accordion title="Is the PMJAY/Ayushman Bharat checkbox mandatory?">
+    No. It is optional. Tick it only if the customer is a registered PMJAY beneficiary. It does not apply any automatic discount. It simply tags the customer so their sales can be handled separately during billing and tracked in PMJAY sales reports.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Customer List"
+    description="View, search, and manage all your customer profiles."
+    href="/docs/customers/customer-list"
+    icon="List"
+  />
+  <Card
+    title="Add a Customer"
+    description="Create a new customer profile."
+    href="/docs/customers/add-customer"
+    icon="UserPlus"
+  />
+  <Card
+    title="Ledger"
+    description="Track customer transactions and payment history."
+    href="/docs/customers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Store Requests"
+    description="Accept or reject link requests from other pharmacy stores."
+    href="/docs/customers/store-requests"
+    icon="Link"
+  />
+  <Card
+    title="Billing Notes"
+    description="Manage credit and debit notes for customers."
+    href="/docs/customers/billing-notes"
+    icon="FileText"
+  />
+  <Card
+    title="Trash"
+    description="Recover deleted customer profiles and view their history."
+    href="/docs/customers/trash"
+    icon="Trash2"
+  />
+</Cards>

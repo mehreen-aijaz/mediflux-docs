@@ -1,0 +1,126 @@
+---
+title: Add a Customer
+description: Create a new customer profile in MediFlux — as an individual consumer or a business.
+icon: UserPlus
+---
+
+When adding a customer in MediFlux, you can create either a **Consumer** profile (for individual, walk-in customers) or a **Business** profile (for businesses or other pharmacies you supply to). Both options are available from the Customer List page and from the **`+` quick-add menu** available on every screen.
+
+---
+
+## Opening the Add Customer form
+
+You can open the **Add New Customer** form in two ways:
+
+- From the Customer List page, click **+ Add Customer**
+- Click the **`+` menu** in the top-right corner of any screen and select **Add Customer**
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661642600-740603868-add-customer.png"
+  title="Add New Customer form"
+  description="Consumer/Business toggle at the top of the form."
+/>
+
+---
+
+## Option 1 — Consumer
+
+Use the **Consumer** tab to add an individual customer.
+
+### Basic details
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Full Name** | Yes | Customer's full name |
+| **Gender** | Yes | Select the customer's gender |
+| **Phone Number** | Yes | Customer's primary contact number |
+| **Email Address** | No | Customer's email address |
+| **Aadhaar Number** | No | Customer's Aadhaar ID number |
+| **Age** | No | Customer's age |
+
+### PMJAY / Ayushman Bharat Customer
+
+Tick the **PMJAY / Ayushman Bharat Customer** checkbox to mark this customer as a beneficiary of the Ayushman Bharat PMJAY scheme. This reveals additional fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Ayushman Card Number** | Yes | The customer's PMJAY card number |
+| **Beneficiary ID** | No | Beneficiary ID, if available |
+| **ABHA Number** | No, but recommended | The customer's Ayushman Bharat Health Account number |
+
+<Note>
+Marking a customer as a PMJAY beneficiary does not apply any automatic discount. It simply tags the customer so their sales can be handled separately during billing and tracked in dedicated PMJAY sales reports.
+</Note>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661752801-133018284-pmjay-customers.png"
+  title="PMJAY fields"
+  description="Consumer form with PMJAY fields expanded."
+/>
+
+### Additional information
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **State** | Yes | Customer's state |
+| **Full Address** | Yes | Customer's complete address |
+| **Notes** | No | Any internal notes about this customer |
+| **Opening Outstanding** | No | Any existing amount this customer already owed you before adding them to MediFlux. Defaults to `0` |
+| **Customer Rating** | No | A manual 1–5 star rating reflecting how reliable or valued this customer is |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661988626-617696622-consumer-form.png"
+  title="Additional Information — Consumer"
+  description="State, address, notes, opening outstanding, and customer rating fields."
+/>
+
+---
+
+## Option 2 — Business
+
+Use the **Business** tab to add a business or another pharmacy store as a customer.
+
+### Basic details
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Business Name** | Yes | Name of the business — e.g. ABC Enterprises |
+| **Phone Number** | Yes | Primary contact number |
+| **Email Address** | No | Business email address |
+| **License Number** | Yes | Drug license number of the business |
+| **GSTIN** | No | GST Identification Number |
+
+### Additional information
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **State** | Yes | Business's state |
+| **Full Address** | Yes | Business's complete address |
+| **Notes** | No | Any internal notes about this customer |
+| **Opening Outstanding** | No | Any existing amount this business already owed you before adding them to MediFlux. Defaults to `0` |
+| **Customer Rating** | No | A manual 1–5 star rating reflecting how reliable or valued this customer is |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661988625-840150066-bussiness-form.png"
+  title="Business form"
+  description="Business customer form filled out with all details."
+/>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Customer Profile"
+    description="View and manage detailed customer information."
+    href="/docs/customers/customer-profile"
+    icon="User"
+  />
+  <Card
+    title="Customer Ledger"
+    description="Track customer transactions and payment history."
+    href="/docs/customers/ledger"
+    icon="BookOpen"
+  />
+</Cards>

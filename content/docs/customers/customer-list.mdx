@@ -20,7 +20,7 @@ At the top of the page, four summary cards give you an at-a-glance overview of y
 | **Local Customers** | Number of manually added local/individual customers |
 
 <Figure
-  src="/images/customer-summary-cards.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256341-950662883-summarycards.png"
   title="Summary cards"
   description="Four summary cards at the top of the Customer List page."
 />
@@ -34,7 +34,7 @@ The search bar at the top lets you search across **names, phone numbers, emails,
 To the left of the search bar is an **All** dropdown — use it to narrow the search scope if needed.
 
 <Figure
-  src="/images/customer-search.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256340-70445864-search-customer.png"
   title="Search bar"
   description="Search across names, phone numbers, emails, and addresses."
 />
@@ -51,7 +51,7 @@ Below the search bar, two quick-filter chips let you slice the list instantly:
 | **Local Customers** | Only manually added individual or business customers |
 
 <Figure
-  src="/images/customer-filter-chips.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660326678-821843156-filter-chips.png"
   title="Filter chips"
   description="Quick-filter chips for Linked Stores and Local Customers."
 />
@@ -62,20 +62,22 @@ Below the search bar, two quick-filter chips let you slice the list instantly:
 
 Next to the filter chips, two view icons let you switch how customers are displayed:
 
-- **Grid view** — shows each customer as a card with their rating badge, name, type (Consumer/Business), phone, email, address, and how long they've been a customer
 - **List view** — shows customers in a compact table format
+- **Grid view** — shows each customer as a card with their rating badge, name, type (Consumer/Business), phone, email, address, and how long they've been a customer
+
+
 
 <Figure
-  src="/images/customer-grid-view.png"
+  src=" https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660404796-559720747-list-view.png"
+  title="List view"
+  description="Customers displayed in a compact table in List view."
+/>
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660404795-564251845-grid-view.png"
   title="Grid view"
   description="Customers displayed as cards in Grid view."
 />
 
-<Figure
-  src="/images/customer-list-view.png"
-  title="List view"
-  description="Customers displayed in a compact table in List view."
-/>
 
 ---
 
@@ -104,7 +106,7 @@ Every customer card or row shows a rating badge based on the **Customer Rating**
 | **Actions** | Quick action menu for that customer row |
 
 <Figure
-  src="/images/customer-table-list.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660559310-218822712-customer-table-list-view.png"
   title="Customer table — List view"
   description="Detailed table view of all customer records."
 />
@@ -121,6 +123,13 @@ The **Name** and **Outstanding** columns are sortable. Click the column header t
 
 Click the **filter icon** to open the **Filter & Sort** panel:
 
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660852278-699218987-filter-icon.png"
+  title="Filter & Sort Icon"
+  description="Advanced filtering and sorting options."
+/>
+
+
 | Option | What it does |
 | --- | --- |
 | **Sort By** | Sort customers by Name or Last Payment |
@@ -129,7 +138,7 @@ Click the **filter icon** to open the **Filter & Sort** panel:
 Click **Apply Filters** to apply, or **Reset** to clear all filters.
 
 <Figure
-  src="/images/customer-filter-sort-panel.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660640379-866791328-filterandsort-panel.png"
   title="Filter & Sort panel"
   description="Advanced filtering and sorting options for the customer list."
 />
@@ -142,19 +151,57 @@ Click **Apply Filters** to apply, or **Reset** to clear all filters.
 | --- | --- |
 | **+ Add Customer** | Opens the Add New Customer form to create a new customer profile |
 | **Add Payment** | Opens the Add Customer Payment dialog to record a payment from a customer |
+| **Import Customers** | Opens the Import Customers dialog to bulk upload customers via CSV or Excel |
 | **Export** | Opens the Export Customers dialog |
 
 <Figure
-  src="/images/customer-page-buttons.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661054216-819186587-page-level-buttons.png"
   title="Page-level action buttons"
-  description="Add Customer, Add Payment, and Export buttons at the top of the page."
+  description="Add Customer, Add Payment, Import Customers, and Export buttons at the top of the page."
 />
+
+---
+
+## Importing customers
+
+Click the **Import Customers** button to open the Import Customers dialog. The import process works in four steps:
+
+<Steps>
+  <Step title="Upload">
+    Drag and drop your CSV or Excel file, or click **Select File** to browse. You can also **Download Template** to get a pre-formatted file with the correct headers.
+  </Step>
+  <Step title="Map Headers">
+    Match the columns from your uploaded file to MediFlux customer fields. Ensure required fields like Name and Phone are correctly mapped.
+  </Step>
+  <Step title="Preview">
+    Review the imported data before finalising. Check for errors, missing values, or duplicates.
+  </Step>
+  <Step title="Complete">
+    Confirm the import and all valid customers are added to your Customer List instantly.
+  </Step>
+</Steps>
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661173515-480779070-import-customers.png"
+  title="Import Customers dialog"
+  description="Upload CSV or Excel file to bulk import customers into MediFlux."
+/>
+
+<Note>
+  Download the template first to ensure your file has the correct column headers. Required fields include **Name** and **Phone**. Optional fields include Email, Address, GSTIN, Age, Gender, and more.
+</Note>
 
 ---
 
 ## Exporting customers
 
 Click the **export icon** to open the **Export Customers** dialog.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661502914-403835639-export-button.png"
+  title="Export Customers "
+  description="Export Customer in Pdf or Excel."
+/>
 
 ### Columns to include
 
@@ -194,44 +241,26 @@ Click the dropdown arrow on the **Export** button to choose:
 - **Export Excel**
 
 <Figure
-  src="/images/customer-export-columns.png"
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661247374-941995045-export.png"
   title="Export Customers — Columns & Filters"
   description="Select columns and apply filters before exporting."
-/>
-
-<Figure
-  src="/images/customer-export-date-filters.png"
-  title="Export Customers — Date Filters"
-  description="Filter by date ranges with quick options or custom dates."
-/>
-
-<Figure
-  src="/images/customer-export-format.png"
-  title="Export format dropdown"
-  description="Choose between PDF and Excel export formats."
 />
 
 ---
 
 ## Next steps
 
-<WideCards>
-  <WideCard
+<Cards cols={2}>
+  <Card
     title="Add a Customer"
     description="Learn how to create a new customer profile."
     href="/docs/customers/add-customer"
     icon="UserPlus"
   />
-  <WideCard
+  <Card
     title="Customer Profile"
     description="View and manage detailed customer information."
     href="/docs/customers/customer-profile"
     icon="User"
   />
-  <WideCard
-    title="Ledger"
-    description="Track customer transactions and payment history."
-    href="/docs/customers/ledger"
-    icon="BookOpen"
-  />
-</WideCards>
+</Cards>
