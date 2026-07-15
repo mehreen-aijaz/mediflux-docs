@@ -24,9 +24,9 @@ export const AI_MODELS: AiModel[] = [
   },
 ];
 
-export function buildDocQuestionPrompt(pageUrl: string, question: string) {
+export function buildDocQuestionPrompt(markdownUrl: string, question: string) {
   const trimmed = question.trim();
-  const intro = `Read from "${pageUrl}", so I can ask questions about it.`;
+  const intro = `Read the MediFlux docs page at ${markdownUrl}, then answer my questions using only that page.`;
 
   if (!trimmed) return intro;
   return `${intro}\n\nQuestion: ${trimmed}`;

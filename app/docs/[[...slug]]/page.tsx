@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 import { PrevNext } from "@/components/docs/prev-next";
 import { estimateReadingTime } from "@/lib/utils";
 import { getMdxComponents } from "@/lib/mdx-components";
+import { OG_IMAGES } from "@/lib/og";
+import { SITE_URL } from "@/lib/site";
 import { Clock } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -104,9 +106,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const page = source.getPage(slug);
   if (!page) return {};
 
+  const title = page.data.title;
+  const description = page.data.description;
+  const url = `${SITE_URL}${page.url}`;
+
   return {
-    title: page.data.title,
-    description: page.data.description,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      siteName: "MediFlux Docs",
+      locale: "en_IN",
+      title,
+      description,
+      url,
+      images: OG_IMAGES,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: OG_IMAGES,
+    },
   };
 }
 
