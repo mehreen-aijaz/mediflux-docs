@@ -63,3 +63,31 @@ The booking request is declined and does not appear in your Appointments list.
 - Approving a booking without checking doctor availability, since these are patient-submitted requests, double-check the requested date and time don't conflict with existing appointments
 
 ---
+## Booking decided
+
+<Cards cols={2}>
+  <Card
+    title="Appointments"
+    description="View approved bookings now scheduled."
+    href="/docs/clinic/appointments"
+    icon="CalendarCheck"
+  />
+  <Card
+    title="Schedules"
+    description="Check doctor availability before approving requests."
+    href="/docs/clinic/schedules"
+    icon="Calendar"
+  />
+  <Card
+    title="Doctors"
+    description="View the doctor handling this booking."
+    href="/docs/clinic/doctors"
+    icon="Stethoscope"
+  />
+  <Card
+    title="Add a Customer"
+    description="Register the patient for billing after their appointment."
+    href="/docs/customers/add-customer"
+    icon="UserPlus"
+  />
+</Cards>

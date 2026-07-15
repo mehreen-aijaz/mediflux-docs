@@ -1,7 +1,7 @@
 ---
 title: Trash
 description: View and restore deleted supplier profiles, or permanently remove them from your system.
-icon: Trash
+icon: Trash2
 ---
 
 The **Trash** page holds all supplier profiles that have been deleted from your system. Deleted suppliers are not permanently removed immediately. They stay in Trash so you can restore them if needed.
@@ -76,3 +76,32 @@ Restoring a supplier brings back their full profile and all linked purchase hist
     The supplier is restored with their full profile and outstanding balance exactly as it was when they were deleted.
   </Accordion>
 </Accordions>
+
+## Common follow-ups
+
+<Cards cols={2}>
+  <Card
+    title="Supplier List"
+    description="Find restored suppliers back in your active directory."
+    href="/docs/suppliers/supplier-list"
+    icon="List"
+  />
+  <Card
+    title="Supplier Profile"
+    description="View full details of a supplier after restoring them."
+    href="/docs/suppliers/supplier-profile"
+    icon="User"
+  />
+  <Card
+    title="Purchase List"
+    description="See all preserved purchases from restored suppliers."
+    href="/docs/purchases/purchase-list"
+    icon="List"
+  />
+  <Card
+    title="Add Purchase"
+    description="Record new stock from a restored supplier."
+    href="/docs/purchases/add-purchase"
+    icon="Truck"
+  />
+</Cards>

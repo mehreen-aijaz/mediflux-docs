@@ -129,13 +129,31 @@ Yes, the appointment card shows a **Partially Paid** status with the remaining a
 
 ---
 
-## Next steps
+## After the appointment
 
-<WideCards>
-  <WideCard
+<Cards cols={2}>
+  <Card
     title="Pending Bookings"
-    description="Confirm or reject new booking requests."
+    description="Confirm or reject new appointment requests."
     href="/docs/clinic/pending-bookings"
     icon="Clock"
   />
-</WideCards>
+  <Card
+    title="Prescriptions"
+    description="View prescriptions written during this appointment."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+  <Card
+    title="Doctors"
+    description="View the doctor who handled this appointment."
+    href="/docs/clinic/doctors"
+    icon="Stethoscope"
+  />
+  <Card
+    title="Schedules"
+    description="Adjust availability if appointments are overbooked."
+    href="/docs/clinic/schedules"
+    icon="Calendar"
+  />
+</Cards>

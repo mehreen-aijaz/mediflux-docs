@@ -145,17 +145,31 @@ These fields are optional but highly recommended. Without GSTIN your purchase en
 
 ---
 
-## Common supplier workflows
+## Start Managing your suppliers
 
-| If you want to... | Go to... |
-| --- | --- |
-| Add a new distributor | [Add a Supplier](/docs/suppliers/add-supplier) |
-| See what you owe all suppliers | [Ledger](/docs/suppliers/ledger) |
-| Fix a wrong opening balance | [Ledger → Adjust](/docs/suppliers/ledger) |
-| Restore a deleted supplier | [Trash](/docs/suppliers/trash) |
-| Record stock you received | [Add Purchase](/docs/purchases/add-purchase) |
-| Pay a supplier | [Add Supplier Payment](/docs/suppliers/payments) |
-
-<Note>
-You can also access **Add Supplier** and **Add Supplier Payment** from the `+` quick-add menu on any screen, without navigating to the Suppliers section.
-</Note>
+<Cards cols={2}>
+  <Card
+    title="Supplier List"
+    description="Browse, search, and manage all your distributor profiles."
+    href="/docs/suppliers/supplier-list"
+    icon="Truck"
+  />
+  <Card
+    title="Ledger"
+    description="Check outstanding payments across all suppliers."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Add Purchase"
+    description="Record new stock received from a supplier."
+    href="/docs/purchases/add-purchase"
+    icon="ShoppingCart"
+  />
+  <Card
+    title="Purchase List"
+    description="View all past purchases and filter by supplier."
+    href="/docs/purchases/purchase-list"
+    icon="List"
+  />
+</Cards>

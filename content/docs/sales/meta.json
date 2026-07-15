@@ -1,4 +1,4 @@
 {
   "title": "Sales",
-  "pages": ["index", "sale-list","add-sale","scan-and-ocr","add-credit-note","returned-sales","re-orders","drafts"]
+  "pages": ["index", "sale-list","add-sale-retail","add-wholesale","scan-and-ocr","add-credit-note","returned-sales","re-orders","drafts"]
 }

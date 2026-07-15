@@ -107,21 +107,31 @@ These fields are optional but highly recommended. Without GSTIN your purchase en
 
 ---
 
-## Next Actions
-
-After adding a supplier, here's what most users do next:
+## After adding a supplier
 
 <Cards cols={2}>
   <Card
-    title="Record a purchase"
+    title="Record a Purchase"
     description="Add inward stock from this supplier to your inventory."
     href="/docs/purchases/add-purchase"
     icon="Truck"
   />
   <Card
-    title="View supplier profile"
-    description="Check the supplier's details, purchase history, and outstanding balance."
-    href="/docs/suppliers/supplier-profile"
-    icon="User"
+    title="Supplier Ledger"
+    description="Check outstanding balance and record payments."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Supplier List"
+    description="Browse all suppliers and add more if needed."
+    href="/docs/suppliers/supplier-list"
+    icon="List"
+  />
+  <Card
+    title="Drug List"
+    description="Check current stock levels before placing orders."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
   />
 </Cards>

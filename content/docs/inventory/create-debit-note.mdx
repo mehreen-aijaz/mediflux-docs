@@ -4,9 +4,9 @@ description: Raise a debit note to a supplier to remove medications from your in
 icon: FilePlus
 ---
 
-A **Debit Note** is how you formally record that you're returning medications to a supplier, for reasons like damaged stock, excess quantity, or expired drugs. Creating a debit note permanently removes the selected quantity from your inventory, since that stock is no longer available for sale once it's marked for return.
-
-There are two ways to create a debit note in MediFlux.
+**Debit Note** is how you formally record that you're returning medications to a supplier, for reasons like damaged stock, excess quantity, or expired drugs. The selected stock is not deleted from your inventory yet,
+but it is no longer available for sale once marked for return.
+A debit note does not create any ledger entry, it is purely a return record for tracking purposes.
 
 ---
 
@@ -120,15 +120,32 @@ The newly created debit note appears in **Billing Notes → Debit Notes**, where
 Once confirmed, the stock is deducted immediately and cannot be added back automatically. If you need the stock again, it has to be re-added through a purchase.
 </Warning>
 
----
 
-## Next steps
+## Restock or review
 
 <Cards cols={2}>
   <Card
-    title="Trash"
-    description="Track debit notes raised and credit notes received."
+    title="Billing Notes"
+    description="Track the status of your debit note until it's credited."
     href="/docs/inventory/billing-notes"
     icon="FileText"
+  />
+  <Card
+    title="Drug List"
+    description="Verify that returned stock was deducted from inventory."
+    href="/docs/inventory/drug-list"
+    icon="List"
+  />
+  <Card
+    title="Supplier Ledger"
+    description="Check if the supplier issued a credit note against your debit note."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Add Purchase"
+    description="Restock with quality items from the same or a different supplier."
+    href="/docs/purchases/add-purchase"
+    icon="Truck"
   />
 </Cards>

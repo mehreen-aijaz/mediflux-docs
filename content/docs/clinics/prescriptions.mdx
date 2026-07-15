@@ -43,19 +43,31 @@ Click on any prescription row to open the full details, showing:
 
 ---
 
-## Next steps
+## From prescription to sale
 
-<WideCards>
- <WideCard
-   title="Doctors"
-   description="Manage your clinic's doctor directory."
-   href="/docs/clinic/doctors"
-   icon="Stethoscope"
- />
- <WideCard
-   title="Appointments"
-   description="View appointments linked to prescriptions."
-   href="/docs/clinic/appointments"
-   icon="CalendarCheck"
- />
-</WideCards>
+<Cards cols={2}>
+  <Card
+    title="Add Retail Sale"
+    description="Bill the patient using the prescribed medicines."
+    href="/docs/sales/add-retail-sale"
+    icon="ShoppingCart"
+  />
+  <Card
+    title="Drug List"
+    description="Check if prescribed medicines are in stock."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Doctors"
+    description="View the doctor who wrote this prescription."
+    href="/docs/clinic/doctors"
+    icon="Stethoscope"
+  />
+  <Card
+    title="Appointments"
+    description="See the appointment linked to this prescription."
+    href="/docs/clinic/appointments"
+    icon="CalendarCheck"
+  />
+</Cards>

@@ -141,19 +141,31 @@ The doctor is removed from your Doctors list. Records linked to them elsewhere, 
 
 ---
 
-## Next steps
+## After adding a doctor
 
-<WideCards>
-  <WideCard
-    title="Prescriptions"
-    description="View and manage prescriptions issued by your doctors."
-    href="/docs/clinic/prescriptions"
-    icon="FileText"
-  />
-  <WideCard
+<Cards cols={2}>
+  <Card
     title="Schedules"
-    description="Set when each doctor is available for appointments."
+    description="Set when this doctor is available for appointments."
     href="/docs/clinic/schedules"
     icon="Calendar"
   />
-</WideCards>
+  <Card
+    title="Prescriptions"
+    description="View prescriptions this doctor will issue."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+  <Card
+    title="Appointments"
+    description="See appointments booked with this doctor."
+    href="/docs/clinic/appointments"
+    icon="CalendarCheck"
+  />
+  <Card
+    title="Add Retail Sale"
+    description="Bill patients after their appointment with this doctor."
+    href="/docs/sales/add-retail-sale"
+    icon="ShoppingCart"
+  />
+</Cards>

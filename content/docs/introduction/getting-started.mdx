@@ -1,200 +1,229 @@
 ---
 title: Getting Started
-description: Get up and running with MediFlux in minutes.
+description: Set up your MediFlux store, configure billing preferences, add inventory, and make your first sale — with both self-service and assisted onboarding options.
 icon: Rocket
 ---
 
-This guide walks you through the initial setup of MediFlux so you can start managing your pharmacy operations as quickly as possible. By the end of this guide, you'll have a running MediFlux instance with a configured pharmacy profile ready to process transactions.
+This guide walks you through setting up **MediFlux** for the first time, from creating your store to making your first sale. Whether you prefer a quick self-service setup or guided onboarding with our support team, you'll be up and running within minutes.
 
-Before you begin, make sure you've completed the [installation](/docs/introduction/installation) process and have MediFlux running on your machine or server.
+---
 
-## Quick Start
+## What you need
+
+**MediFlux** is a web-based PWA that runs on any device with a browser and internet connection. **No downloads or local servers are required.**
+
+| Component | Minimum | Recommended |
+| --- | --- | --- |
+| **Operating System** | Any modern OS | Windows 10+, macOS, Linux, Android, iOS |
+| **Processor** | Any dual-core CPU | Intel Core i3 or above |
+| **RAM** | 2 GB | 4 GB or above |
+| **Internet** | Basic connectivity (2 Mbps) | Stable 4G or broadband (5–10 Mbps) |
+| **Browser** | Latest Chrome, Firefox, Edge | Chrome (latest version) |
+
+Even pharmacies in remote areas with modest connectivity and basic desktops can operate efficiently.
+
+---
+
+## Creating your store
+
+You have two ways to get started:
+
+| Method | Best for |
+| --- | --- |
+| **Self-service signup** | Pharmacy owners who want to explore the platform immediately |
+| **Assisted onboarding** | Teams who want help with data migration, configuration, and staff training |
+
+### Self-service signup
 
 <Steps>
-  <Step title="Create Your Organization">
-
-    After launching MediFlux for the first time, you'll be prompted to create your organization. This is the top-level entity that contains all your pharmacy locations, users, and settings.
-
-    ```typescript title="Example: Create Organization via API"
-    const response = await fetch("https://api.mediflux.io/v1/organizations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer your-api-key",
-      },
-      body: JSON.stringify({
-        name: "HealthFirst Pharmacies",
-        type: "pharmacy_chain",
-        country: "US",
-        timezone: "America/New_York",
-      }),
-    });
-
-    const organization = await response.json();
-    console.log("Organization created:", organization.id);
-    ```
-
-    <Callout type="info">
-      You can also complete this step through the MediFlux web dashboard at `http://localhost:3000/setup`.
-    </Callout>
-  </Step>
-
-  <Step title="Configure Your First Pharmacy Location">
-    
-    Each pharmacy location operates as an independent unit within your organization, with its own inventory, staff, and settings. Add your first location to start managing day-to-day operations.
-
-    ```typescript title="Example: Add a Pharmacy Location"
-    const location = await fetch("https://api.mediflux.io/v1/locations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer your-api-key",
-      },
-      body: JSON.stringify({
-        organization_id: "org_abc123",
-        name: "Downtown Pharmacy",
-        address: {
-          street: "123 Main Street",
-          city: "Springfield",
-          state: "IL",
-          zip: "62701",
-        },
-        license_number: "PH-2024-001234",
-        phone: "+1-555-0123",
-      }),
-    });
-    ```
-  </Step>
-
-  <Step title="Set Up User Accounts">
-
-    Create user accounts for your pharmacy staff. MediFlux supports role-based access control with predefined roles like `pharmacist`, `technician`, `cashier`, and `manager`, or you can define custom roles.
-
-    ```typescript title="Example: Create a Staff User"
-    const user = await fetch("https://api.mediflux.io/v1/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer your-api-key",
-      },
-      body: JSON.stringify({
-        email: "jane.doe@healthfirst.com",
-        name: "Jane Doe",
-        role: "pharmacist",
-        location_id: "loc_xyz789",
-        permissions: ["sales.create", "inventory.view", "prescriptions.manage"],
-      }),
-    });
-    ```
-
-    <Callout type="warning">
-      Always follow the principle of least privilege when assigning permissions. Grant users only the access they need for their specific role.
-    </Callout>
-  </Step>
-
   <Step>
-    ### Import Your Inventory
-
-    Load your existing product catalog and inventory into MediFlux. You can import data from CSV files, connect to supplier catalogs, or enter products manually.
-
-    ```bash title="Import inventory from CSV"
-    mediflux import inventory \
-      --file ./inventory-export.csv \
-      --location loc_xyz789 \
-      --format csv \
-      --mapping name:product_name,sku:item_code,qty:stock_quantity
-    ```
-
-    <Callout type="success">
-      MediFlux automatically validates imported data and flags any issues like duplicate SKUs, missing required fields, or invalid batch numbers before committing changes.
-    </Callout>
+    Go to the [Start Free Trial](https://www.mediflux.in/start-free-trial) page and enter your pharmacy details, GSTIN, and business type.
   </Step>
-
   <Step>
-    ### Start Processing Sales
-
-    With your organization, location, users, and inventory configured, you're ready to process your first sale. Head to the [Sales](/docs/pharmacy/sales) section to learn about the point-of-sale workflow.
+    Your cloud store is provisioned instantly — **no downloads, no servers, no IT team required.**
+  </Step>
+  <Step>
+    Log in and start exploring the dashboard right away.
   </Step>
 </Steps>
 
-## Media Examples
+<Figure
+  src="/images/getting-started-registration.png"
+  title="Registration form"
+  description="Step 1 of the signup flow — enter your store name, address, state, district, and pincode."
+/>
 
-Use hosted image URLs in standard Markdown — the alt text becomes the visible title below the image:
+### Assisted onboarding
 
-![MediFlux dashboard overview](https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&h=720&q=80)
+<Steps>
+  <Step>
+    Fill out the form on the [Start Free Trial](https://www.mediflux.in/start-free-trial) page with your pharmacy details.
+  </Step>
+  <Step>
+    Our support team will contact you and guide you through the setup process.
+  </Step>
+  <Step>
+    We connect remotely to help you understand the system and give you a live walkthrough.
+  </Step>
+  <Step>
+    We assist with importing or manually adding your stock and customer records.
+  </Step>
+  <Step>
+    We guide you through billing, expiry alerts, and staff role configuration.
+  </Step>
+  <Step>
+    Training is provided remotely so your team can start using **MediFlux** confidently from day one.
+  </Step>
+</Steps>
 
-Or use the `Figure` component when you need a separate title and description:
+---
+
+## Configuring your store
+
+Once your store is created, configure the basics before you start billing:
+
+| Setting | What to do |
+| --- | --- |
+| **GST rates** | Set your default GST rates and HSN preferences under **Settings → Accounting Settings** |
+| **Invoice templates** | Choose your bill format under **Settings → Bill Templates** |
+| **Payment methods** | Configure accepted payment methods and linked bank accounts under **Settings → Accounting Settings** |
+| **Customer credit policies** | Set credit limits and payment terms if you offer Udhaar (credit) sales |
+| **User roles** | Add staff members and assign permissions under **Settings → User Management** |
+
+---
+
+## Adding your inventory
+
+You can populate your drug catalog in three ways:
+
+| Method | How it works |
+| --- | --- |
+| **Excel import** | Upload your existing drug list via Excel. **MediFlux** pre-fills drug names, compositions, and HSN codes where available. |
+| **Barcode scan** | Scan drug barcodes to auto-populate name, batch, expiry, MRP, and stock details. |
+| **Manual entry** | Add medicines one by one through the **Drugs → Add Drug** form. |
 
 <Figure
-  src="https://picsum.photos/seed/mediflux-pharmacy/1200/320"
-  title="Pharmacy inventory workflow"
-  description="Hosted on Picsum — inventory counts synced across locations."
+  src="/images/getting-started-drug-list.png"
+  title="Drug List"
+  description="View your full inventory, check stock levels, and use the Import button to bulk upload drugs via Excel."
 />
 
-Embed a YouTube walkthrough with the video ID or full URL:
+For detailed instructions, see [Drug List](/docs/inventory/drug-list).
 
-<YouTube
-  id="dQw4w9WgXcQ"
-  title="MediFlux platform overview"
-  description="YouTube walkthrough of the MediFlux dashboard."
+---
+
+## Making your first sale
+
+Once your inventory is set up, you're ready to bill:
+
+<Steps>
+  <Step>
+    Go to **Sales → Add Sale** and select **Retail** or **Wholesale** mode.
+  </Step>
+  <Step>
+    Add a customer (or leave as cash sale) and select drugs from your inventory.
+  </Step>
+  <Step>
+    Choose the payment status — **Paid**, **Unpaid**, or **Partial**.
+  </Step>
+  <Step>
+    Click **+ Add** to finalise the bill.
+  </Step>
+</Steps>
+
+<Figure
+  src="/images/getting-started-add-sale.png"
+  title="Add Sale"
+  description="The Retail sale form with customer details, payment status, and drug table ready for billing."
 />
 
-Embed a hosted video file from an external URL:
+Your first sale is now recorded. You can view it anytime in [Sales List](/docs/sales/sales-list), share it via WhatsApp, or print it directly.
 
-<Video
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1772097972614-323333665-WhatsApp%20Video%202026-02-22%20at%202.08.16%20PM%20%281%29.mp4"
-  title="Hosted training video sample"
-  description="Hosted MP4 from an external storage URL."
+---
+
+## Moving to a paid subscription
+
+After your free trial, our team will guide you through purchasing a subscription. We offer **transparent yearly and multi-year plans with no hidden fees or surprise charges.** Payment can be made via UPI, net banking, or other secure channels.
+
+| Step | What happens |
+| --- | --- |
+| 1 | Receive your invoice and make payment through your preferred mode |
+| 2 | **Subscription activates instantly** upon payment confirmation |
+| 3 | Full access and continuous support continues with no downtime |
+
+With your paid subscription, you get access to all advanced features, regular updates, and our support team whenever you need help.
+
+---
+
+## What's next
+
+Once your setup is complete, explore these features to get the most out of **MediFlux**:
+
+<Figure
+  src="/images/getting-started-dashboard.png"
+  title="Dashboard Overview"
+  description="Your home screen shows key metrics — total drugs, drug value, suppliers, customers, and expired stock alerts."
 />
 
-## Environment Configuration
+- **Expiry and stock alerts** — Get notified before drugs expire or run low
+- **Sales analytics** — Track trends, profit margins, and top-selling drugs from the dashboard
+- **GST reports** — Generate GSTR-1, GSTR-2, and GSTR-3B with one click
+- **Customer and supplier ledgers** — Track credit, payments, and outstanding dues
+- **Role-based access** — Control what each staff member can view and edit
 
-MediFlux uses environment variables for core configuration. Here's a minimal configuration to get started:
+<Callout type="info" title="Quick tip">
+Click the **+ button** in the top bar from any page to quickly add a Sale, Purchase, Customer, Customer Payment, Supplier, or Supplier Payment without navigating through menus.
+</Callout>
 
-```bash title=".env"
-# Database
-DATABASE_URL=postgresql://mediflux:password@localhost:5432/mediflux
+---
 
-# Application
-MEDIFLUX_PORT=3000
-MEDIFLUX_SECRET_KEY=your-secret-key-here
-MEDIFLUX_ENV=production
+## Frequently Asked Questions
 
-# Storage
-MEDIFLUX_STORAGE_TYPE=local
-MEDIFLUX_STORAGE_PATH=/var/mediflux/uploads
-```
+<Accordions>
+  <Accordion title="How long does the free trial last?">
+    The free trial gives you **full access for 7 days** with no credit card required.
+  </Accordion>
+  <Accordion title="Can I switch from assisted onboarding to self-service later?">
+    Yes. Even if you start with assisted onboarding, you retain full self-service access to all settings and features at any time.
+  </Accordion>
+  <Accordion title="What happens to my data if I don't subscribe after the trial?">
+    Your data remains in the system for a limited grace period. We recommend subscribing before the trial ends to avoid any interruption. Contact support if you need an extension.
+  </Accordion>
+  <Accordion title="Do I need a GSTIN to use MediFlux?">
+    **No.** While entering your GSTIN enables GST-compliant invoicing and reporting, you can use **MediFlux** for basic billing and inventory without it.
+  </Accordion>
+  <Accordion title="Can I use MediFlux on multiple devices?">
+    **Yes.** **MediFlux** syncs across all devices in real time. You can bill from your shop computer, check stock from your phone, and manage reports from a tablet.
+  </Accordion>
+</Accordions>
 
-For a complete list of configuration options, see the [Configuration](/docs/introduction/configuration) guide.
+---
 
-## Next Steps
+## Next steps
 
-Now that you have MediFlux up and running, explore the platform's core modules:
-
-<WideCards>
-  <WideCard
-    href="/docs/introduction/installation"
+<Cards cols={2}>
+  <Card
+    title="Add Retail Sale"
+    description="Create your first retail bill."
+    href="/docs/sales/add-retail-sale"
+    icon="ShoppingCart"
   />
-  <WideCard
-    title="Purchase Orders"
-    description="Set up supplier relationships and manage inventory procurement."
-    href="/docs/purchases"
+  <Card
+    title="Drug List"
+    description="Manage and import your drug catalog."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
   />
-  <WideCard
-    title="Accounting"
-    description="Configure your chart of accounts and start tracking finances."
-    href="/docs/accounting"
+  <Card
+    title="Settings — Account"
+    description="Configure store details and preferences."
+    href="/docs/settings/account"
+    icon="Settings"
   />
-  <WideCard
-    title="API Reference"
-    description="Integrate MediFlux with your existing systems using our comprehensive API."
-    href="/docs/api"
+  <Card
+    title="Settings — User Management"
+    description="Add staff and set permissions."
+    href="/docs/settings/user-management"
+    icon="Users"
   />
-  <WideCard
-    title="Download Mobile Application"
-    description="Download the official MediFlux application from the Play Store."
-    href="https://play.google.com/store"
-    icon="Download"
-    target="_blank"
-  />
-</WideCards>
+</Cards>

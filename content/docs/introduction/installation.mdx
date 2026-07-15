@@ -1,209 +1,151 @@
 ---
-title: Installation
-description: Install and configure MediFlux for your environment.
+title: Installation & Setup
+description: Set up MediFlux for the first time. Either yourself, or with our support team's help via remote setup.
 icon: Download
 ---
 
-MediFlux supports multiple deployment methods to fit your infrastructure requirements. Whether you prefer containerized deployments with Docker, a traditional manual installation, or a fully managed cloud instance, this guide covers each approach in detail.
+Before you can start billing, your MediFlux store needs to be created. You can do this yourself in a few minutes, or have our support team connect remotely and set everything up for you. This page covers both paths, along with how to install MediFlux as an app on your device. Once your store is created, head to [Getting Started](/docs/getting-started) to configure billing, add inventory, and make your first sale.
 
-## System Requirements
+---
 
-Before installing MediFlux, ensure your environment meets the following minimum requirements:
+## What you need
 
-| Component        | Minimum              | Recommended           |
-| ---------------- | -------------------- | --------------------- |
-| CPU              | 2 cores              | 4+ cores              |
-| RAM              | 4 GB                 | 8+ GB                 |
-| Disk Space       | 20 GB                | 50+ GB SSD            |
-| Operating System | Ubuntu 20.04+ / RHEL 8+ | Ubuntu 22.04 LTS   |
-| PostgreSQL       | 14.0                 | 16.0+                 |
-| Node.js          | 18.0                 | 20.0+ LTS             |
-| Redis            | 6.0                  | 7.0+                  |
+MediFlux is a web-based PWA that runs on any device with a browser and internet connection — no downloads or local servers are required for the software itself.
 
-<Callout type="info">
-  For production deployments serving more than 50 concurrent users, we recommend the higher-end specifications along with a dedicated database server.
+| Component | Minimum | Recommended |
+| --- | --- | --- |
+| **Operating System** | Any modern OS | Windows 10+, macOS, Linux, Android, iOS |
+| **Processor** | Any dual-core CPU | Intel Core i3 or above |
+| **RAM** | 2 GB | 4 GB or above |
+| **Internet** | Basic connectivity (2 Mbps) | Stable 4G or broadband (5–10 Mbps) |
+| **Browser** | Latest Chrome, Firefox, Edge | Chrome (latest version) |
+
+Even pharmacies in remote areas with modest connectivity and basic desktops can run MediFlux comfortably.
+
+<Figure
+  src="/images/setup-requirements.png"
+  title="System Requirements"
+  description="Minimum and recommended specs for running MediFlux on any device."
+/>
+
+---
+
+## Self-service setup
+
+If you'd rather get started right away without waiting for support, sign up directly:
+
+Go to the **Start Free Trial** page and enter your pharmacy details, GSTIN, and business type. Your cloud store is provisioned instantly. No downloads, no servers, no IT team required. Once done, log in and your store is ready to configure.
+
+<Figure
+  src="/images/setup-self-service.png"
+  title="Self-Service Setup"
+  description="Enter pharmacy details, GSTIN, and business type to create your store instantly."
+/>
+
+---
+
+## Assisted setup (remote installation)
+
+If you'd prefer our team to handle the setup for you, we install and configure your store remotely using **UltraViewer** — a remote-access tool that lets our support team see and control your screen with your permission, so they can set things up exactly as you'd do it yourself.
+
+**Here's how it works:**
+
+You'll need UltraViewer running on the computer you want to set up. You can either download it directly from your browser, or our team will send you the installer file directly over WhatsApp
+,or [click here ](https://www.ultraviewer.net/) to download.
+
+Once UltraViewer is open, it displays a unique **ID** and **Password** for your computer. Share this ID and Password with our support team over call or chat, they'll enter it on their end and connect to your computer with your permission.
+
+**From there, our team will:**
+
+- Create and configure your MediFlux store
+- Help import or manually add your stock and customer records
+- Set up billing preferences, expiry alerts, and staff roles
+- Walk you through the system live, so your team can start using MediFlux confidently
+
+<Note>
+You stay in control throughout the session. UltraViewer only allows access once you've shared your ID and Password, and you can close the connection at any time from your end.
+</Note>
+
+<Figure
+  src="/images/setup-ultraviewer.png"
+  title="UltraViewer Remote Setup"
+  description="Share your UltraViewer ID and Password with support for assisted installation."
+/>
+
+---
+
+## Installing MediFlux as an app
+
+MediFlux can be installed directly on your desktop or mobile device as a standalone app, so it opens with its own icon instead of running inside a browser tab.
+
+| Device | How to install |
+| --- | --- |
+| **Desktop (Windows)** | [Download MediFluxSetup.exe](https://download.mediflux.in/MediFluxSetup.exe) and run the installer |
+| **Mobile (Android)** | Download the MediFlux app from the [Play Store](https://play.google.com/store/apps/details?id=com.mediflux) |
+
+<Note>
+This is separate from the remote UltraViewer setup described above. Installing MediFlux as an app is simply a faster way to launch it on your own device — it doesn't involve anyone else connecting to your computer.
+</Note>
+
+<Figure
+  src="/images/setup-app-install.png"
+  title="Install as App"
+  description="Download MediFluxSetup.exe for desktop or get the app from the Play Store."
+/>
+
+---
+
+<Callout type="success" title="You're in Control">
+  Close UltraViewer anytime once your store is configured. The connection ends immediately — no lingering access.
 </Callout>
+---
 
-## Installation Methods
+## Frequently Asked Questions
 
-<Tabs items={["Docker", "Manual", "Cloud"]}>
-  <Tab value="Docker">
-    Docker is the recommended installation method for most deployments. It handles all dependencies automatically and provides consistent behavior across environments.
+<Accordions>
+  <Accordion title="Do I need to install anything to use MediFlux day-to-day?">
+    No — MediFlux runs entirely in your browser, or as an installed app if you prefer. UltraViewer is only needed temporarily, if you choose assisted setup.
+  </Accordion>
+  <Accordion title="Is it safe to share my UltraViewer ID and Password with support?">
+    Yes — this only grants access for that session, and only after you've shared the credentials yourself. You can end the session anytime.
+  </Accordion>
+  <Accordion title="Can I switch from self-service to assisted setup later, or vice versa?">
+    Yes — reach out to our support team at any point and they can help with either path.
+  </Accordion>
+  <Accordion title="What happens after my store is set up?">
+    Head to [Getting Started](/docs/getting-started) to configure invoice templates, inventory, and make your first sale.
+  </Accordion>
+</Accordions>
 
-    ### Prerequisites
+---
 
-    - Docker Engine 24.0 or later
-    - Docker Compose v2.20 or later
+## Start Using MediFlux
 
-    ### Step 1: Pull the MediFlux Image
+Your store is ready. Here's how to get billing.
 
-    ```bash title="Pull the latest stable image"
-    docker pull mediflux/mediflux:latest
-    ```
-
-    ### Step 2: Create a Docker Compose File
-
-    ```yaml title="docker-compose.yml"
-    version: "3.9"
-
-    services:
-      mediflux:
-        image: mediflux/mediflux:latest
-        ports:
-          - "3000:3000"
-        environment:
-          DATABASE_URL: postgresql://mediflux:password@db:5432/mediflux
-          REDIS_URL: redis://redis:6379
-          MEDIFLUX_SECRET_KEY: ${MEDIFLUX_SECRET_KEY}
-          MEDIFLUX_ENV: production
-        depends_on:
-          db:
-            condition: service_healthy
-          redis:
-            condition: service_started
-        volumes:
-          - mediflux_uploads:/app/uploads
-
-      db:
-        image: postgres:16-alpine
-        environment:
-          POSTGRES_USER: mediflux
-          POSTGRES_PASSWORD: password
-          POSTGRES_DB: mediflux
-        volumes:
-          - mediflux_db:/var/lib/postgresql/data
-        healthcheck:
-          test: ["CMD-SHELL", "pg_isready -U mediflux"]
-          interval: 5s
-          timeout: 5s
-          retries: 5
-
-      redis:
-        image: redis:7-alpine
-        volumes:
-          - mediflux_redis:/data
-
-    volumes:
-      mediflux_db:
-      mediflux_redis:
-      mediflux_uploads:
-    ```
-
-    ### Step 3: Start the Services
-
-    ```bash title="Launch MediFlux"
-    docker compose up -d
-    ```
-
-    MediFlux will be available at `http://localhost:3000` once all services are healthy.
-
-    <Callout type="warning">
-      Change the default database password before deploying to production. Use Docker secrets or an environment file to manage sensitive credentials.
-    </Callout>
-  </Tab>
-
-  <Tab value="Manual">
-    Manual installation gives you full control over the deployment and is suitable for environments where Docker is not available.
-
-    ### Step 1: Install Dependencies
-
-    ```bash title="Ubuntu / Debian"
-    sudo apt update
-    sudo apt install -y postgresql-16 redis-server nodejs npm
-    ```
-
-    ```bash title="RHEL / CentOS"
-    sudo dnf install -y postgresql16-server redis nodejs npm
-    sudo postgresql-setup --initdb
-    sudo systemctl enable --now postgresql redis
-    ```
-
-    ### Step 2: Create the Database
-
-    ```sql title="PostgreSQL setup"
-    CREATE USER mediflux WITH PASSWORD 'your-secure-password';
-    CREATE DATABASE mediflux OWNER mediflux;
-    GRANT ALL PRIVILEGES ON DATABASE mediflux TO mediflux;
-    ```
-
-    ### Step 3: Install MediFlux
-
-    ```bash title="Install from npm"
-    npm install -g @mediflux/server@latest
-    ```
-
-    ### Step 4: Initialize the Database
-
-    ```bash title="Run database migrations"
-    mediflux db migrate --latest
-    mediflux db seed --initial
-    ```
-
-    ### Step 5: Start the Server
-
-    ```bash title="Start MediFlux"
-    mediflux start --port 3000
-    ```
-
-    <Callout type="info">
-      For production deployments, use a process manager like PM2 or systemd to keep MediFlux running and handle automatic restarts.
-    </Callout>
-  </Tab>
-
-  <Tab value="Cloud">
-    MediFlux Cloud is a fully managed service that handles infrastructure, updates, backups, and scaling for you.
-
-    ### Getting Started with MediFlux Cloud
-
-    1. Visit [cloud.mediflux.io](https://cloud.mediflux.io) and create an account
-    2. Choose your plan (Starter, Professional, or Enterprise)
-    3. Select your region for data residency compliance
-    4. Your instance will be provisioned within minutes
-
-    ### Cloud Plans
-
-    | Feature              | Starter       | Professional   | Enterprise     |
-    | -------------------- | ------------- | -------------- | -------------- |
-    | Locations            | 1             | Up to 10       | Unlimited      |
-    | Users                | 5             | 50             | Unlimited      |
-    | API Requests / month | 10,000        | 100,000        | Unlimited      |
-    | Storage              | 5 GB          | 50 GB          | 500 GB         |
-    | Support              | Email         | Priority Email | 24/7 Dedicated |
-    | SLA                  | 99.5%         | 99.9%          | 99.99%         |
-
-    <Callout type="success">
-      MediFlux Cloud includes automatic daily backups, SSL certificates, and zero-downtime updates at no additional cost.
-    </Callout>
-
-    ### Connect via CLI
-
-    ```bash title="Authenticate with MediFlux Cloud"
-    mediflux auth login --cloud
-    mediflux config set endpoint https://your-org.cloud.mediflux.io
-    ```
-  </Tab>
-</Tabs>
-
-## Verifying the Installation
-
-After installation, verify that MediFlux is running correctly:
-
-```bash title="Health check"
-curl http://localhost:3000/api/health
-```
-
-You should receive a response like:
-
-```json title="Expected response"
-{
-  "status": "healthy",
-  "version": "2.4.1",
-  "database": "connected",
-  "redis": "connected",
-  "uptime": "12s"
-}
-```
-
-## Next Steps
-
-With MediFlux installed and running, proceed to [Configuration](/docs/introduction/configuration) to customize the platform for your pharmacy's workflow, or jump straight to [Getting Started](/docs/introduction/getting-started) to set up your first pharmacy location.
+<Cards cols={2}>
+  <Card
+    title="Getting Started"
+    description="Configure your store, add inventory, and make your first sale."
+    href="/docs/getting-started"
+    icon="Rocket"
+  />
+  <Card
+    title="Account"
+    description="Set up your store's business details, logo, signature, and stamp."
+    href="/docs/settings/account"
+    icon="Building"
+  />
+  <Card
+    title="Drug List"
+    description="Import or add your drug catalog before you start billing."
+    href="/docs/drugs/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Add Sale"
+    description="Create your first sale once inventory and settings are in place."
+    href="/docs/sales/add-sale"
+    icon="ShoppingCart"
+  />
+</Cards>

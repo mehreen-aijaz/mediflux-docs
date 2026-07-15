@@ -1,0 +1,216 @@
+---
+title: Add Purchase
+description: Record a new purchase bill from a supplier, either manually, via scan, or by importing a CSV/Excel file.
+icon: Plus
+---
+
+The **Add Purchase** page is where you record stock coming into your pharmacy from a supplier. Enter the supplier and invoice details, add drugs to the bill line by line, and MediFlux automatically calculates taxes, totals, and margins as you go.
+
+---
+
+## Purchase details
+
+At the top of the page, enter:
+
+| Field | Description |
+| --- | --- |
+| **Search for suppliers** | Select the supplier this purchase is from |
+| **Invoice number** | The supplier's invoice/bill number |
+| **Date** | Date of the purchase (defaults to the current date) |
+
+<Figure
+  src="/images/add-purchase-details.png"
+  title="Purchase Details"
+  description="Select supplier, enter invoice number, and set the purchase date."
+/>
+
+---
+
+## Adding drugs to the bill
+
+Each row in the purchase table represents one drug being purchased. You can add a new row using the **`+`** button below the table, or remove a row using the **trash icon** on the left of that row.
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Serial number of the line item |
+| **Type** | Drug schedule type — **Rx**, **NRx**, or **H1** |
+| **Drug** | Search and select the drug being purchased |
+| **Units** | Number of units per pack |
+| **HSN** | HSN code of the drug |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date of the batch |
+| **QTY** | Quantity purchased |
+| **Packs** | Number of packs |
+| **Deal** | Buy/free quantity deal applied to this line item, via **Add Deal** |
+| **Free** | Free quantity received |
+| **Cost** | Cost price per unit |
+| **Trade P** | Trade price |
+| **MRP** | Maximum Retail Price |
+| **DIS** | Discount percentage |
+| **SGST / CGST / IGST** | Applicable GST components |
+| **Subtotal** | Line item value before tax |
+| **Total** | Line item value including tax |
+| **Margin** | Profit margin for that line item |
+
+<Figure
+  src="/images/add-purchase-table.png"
+  title="Purchase Table"
+  description="Add drugs line by line with batch, expiry, quantity, cost, MRP, and tax details."
+/>
+
+<Note>
+Once you select a drug and enter its expiry date, MediFlux shows a price comparison note below the table — for example, flagging if the cost has decreased or increased compared to the average purchase price for that drug. Clicking the **expand icon** on this note opens more detail.
+</Note>
+
+---
+
+## Adding a deal
+
+Click **Add Deal** on any line item to open the **Add Deal** popup:
+
+| Field | Description |
+| --- | --- |
+| **Buy Quantity** | Minimum quantity to buy for this deal to apply |
+| **Free Quantity** | Free quantity received with the deal |
+
+Click **Save Deal** to apply it to that line item, or **Cancel** to close without saving.
+
+<Figure
+  src="/images/add-purchase-deal.png"
+  title="Add Deal"
+  description="Set buy and free quantities for supplier deals on any line item."
+/>
+
+---
+
+## Discount, payment, and notes
+
+Below the drug table:
+
+| Field | Description |
+| --- | --- |
+| **Total Discount** | Overall discount on the purchase, as a percentage or amount |
+| **Enter amount paid** | Amount already paid to the supplier for this purchase |
+| **Notes** | Free-text field for any additional notes or remarks about the purchase |
+
+<Figure
+  src="/images/add-purchase-discount.png"
+  title="Discount and Payment"
+  description="Apply overall discount, record amount paid, and add notes."
+/>
+
+---
+
+## Bill summary
+
+The bar at the bottom of the page shows a running summary as you build the bill:
+
+| Field | Description |
+| --- | --- |
+| **Sub Total** | Total value of all line items before discount and tax |
+| **Disc** | Total discount applied |
+| **Tax** | Total tax across all line items |
+| **Bill** | Final bill amount |
+| **Margin** | Overall profit margin for the purchase |
+
+From here, you can **Save Draft** to save the purchase without finalising it, or click **Add** to record it as a completed purchase.
+
+<Figure
+  src="/images/add-purchase-summary.png"
+  title="Bill Summary"
+  description="Running subtotal, discount, tax, bill amount, and margin at the bottom of the page."
+/>
+
+---
+
+## Scan
+
+Click **Scan** to upload a photo or scan of the supplier's physical invoice. This opens your device's file picker, letting you select an image of the bill. Once uploaded, MediFlux reads the bill and pre-fills the drug rows automatically — the scanned bill also appears under **Drafts** so you can review it before finalising.
+
+<Figure
+  src="/images/add-purchase-scan.png"
+  title="Scan Invoice"
+  description="Upload a supplier invoice photo to auto-read and pre-fill drug rows."
+/>
+
+---
+
+## Import CSV
+
+Click **Import CSV** to bulk-import purchase data from a CSV or Excel file. This opens the **Import Purchase Data** dialog, which walks you through three steps:
+
+| Step | What happens |
+| --- | --- |
+| **1. Upload File** | Drag and drop your CSV or Excel file, or click **Select File** to browse |
+| **2. Map Headers** | Match the columns in your file to MediFlux's purchase fields |
+| **3. Review & Import** | Review the mapped data before confirming the import |
+
+<Figure
+  src="/images/add-purchase-import.png"
+  title="Import CSV"
+  description="Bulk import purchase data via CSV or Excel with header mapping."
+/>
+
+---
+
+## Drafts
+
+Click **Drafts** to open the **Purchase Drafts** panel, which lists purchase bills that were previously scanned. Each draft shows its ID, scan status (e.g. **Scanned**), date and time, and the number of files attached. From here you can:
+
+| Option | What it does |
+| --- | --- |
+| **Rescan** | Re-run the scan on this draft |
+| **Append** | Add the draft's line items to the purchase you're currently building |
+| **Insert** | Replace the current purchase form with this draft's data |
+| **Delete (trash icon)** | Remove the draft |
+
+<Figure
+  src="/images/add-purchase-drafts.png"
+  title="Purchase Drafts"
+  description="Review, rescan, append, insert, or delete scanned purchase drafts."
+/>
+
+---
+
+## Clear
+
+Once you've added at least one drug to the bill, a **Clear** button appears next to **Drafts**, letting you reset the form and start over.
+
+---
+
+## Quick tip
+
+The **`+`** button in the top-right corner of any screen also has an **Add Purchase** option, so you can jump straight into this page from anywhere in MediFlux without navigating through the sidebar.
+
+---
+
+## Stock In, Ready to Go
+
+Recorded your purchase? Here's what happens next.
+
+<Cards cols={2}>
+  <Card
+    title="Purchase List"
+    description="Review your newly recorded purchase and check its status."
+    href="/docs/purchases/purchase-list"
+    icon="List"
+  />
+  <Card
+    title="Drug List"
+    description="Verify the new stock and batches are reflected in your inventory."
+    href="/docs/drugs/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Supplier Ledger"
+    description="See how this purchase affected what you owe the supplier."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Drafts"
+    description="Review and finalise any scanned invoices waiting in drafts."
+    href="/docs/purchases/drafts"
+    icon="FileText"
+  />
+</Cards>

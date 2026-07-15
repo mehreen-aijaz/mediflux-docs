@@ -1,4 +1,4 @@
 {
   "title": "Purchases",
-  "pages": ["index", "create-purchase"]
+  "pages": ["index","purchase-list","purchase-details","purchase-orders","add-purchase","restocks","trash","drafts"]
 }

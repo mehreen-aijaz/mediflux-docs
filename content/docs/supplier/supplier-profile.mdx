@@ -171,8 +171,31 @@ If you only need to update a supplier's details, use **Edit**, not **Delete**. D
 
 ---
 
-## Did you know?
+## From this supplier
 
-<Callout type="info">
-  You can start a new purchase directly from any supplier profile using the **Add Purchase** button — no need to navigate to the Purchases section or re-select the supplier.
-</Callout>
+<Cards cols={2}>
+  <Card
+    title="Add Purchase"
+    description="Record new stock received from this supplier."
+    href="/docs/purchases/add-purchase"
+    icon="Truck"
+  />
+  <Card
+    title="Supplier Ledger"
+    description="Check outstanding balance and record payments."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Purchase List"
+    description="View all past purchases from this and other suppliers."
+    href="/docs/purchases/purchase-list"
+    icon="List"
+  />
+  <Card
+    title="Drug List"
+    description="Check stock levels before placing a new order."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
+  />
+</Cards>

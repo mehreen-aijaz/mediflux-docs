@@ -146,20 +146,31 @@ Yes, use **Booking Link** from the row's action menu to generate a shareable lin
 - Leaving old schedules active instead of archiving them, this can cause confusion when multiple schedules exist for the same doctor
 
 ---
+## Your schedule is live
 
-## Next steps
-
-<WideCards>
-  <WideCard
+<Cards cols={2}>
+  <Card
     title="Appointments"
-    description="View and manage scheduled appointments."
+    description="See bookings made against this schedule."
     href="/docs/clinic/appointments"
     icon="CalendarCheck"
   />
-  <WideCard
+  <Card
     title="Pending Bookings"
-    description="Confirm or reject new booking requests."
+    description="Confirm or reject requests for this schedule."
     href="/docs/clinic/pending-bookings"
     icon="Clock"
   />
-</WideCards>
+  <Card
+    title="Doctors"
+    description="View the doctor whose schedule you just configured."
+    href="/docs/clinic/doctors"
+    icon="Stethoscope"
+  />
+  <Card
+    title="Prescriptions"
+    description="View prescriptions written during these appointments."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+</Cards>

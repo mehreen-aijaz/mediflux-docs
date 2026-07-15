@@ -1,0 +1,106 @@
+---
+title: Drafts
+description: Track the status of scanned purchase bills and clean up drafts you no longer need.
+icon: FileText
+---
+
+The **Drafts** page lists every purchase bill that has been scanned via the **Add Purchase** page, along with its processing status. Use this page to check whether a scanned bill has finished processing, and to delete drafts you no longer need.
+
+---
+
+## Filtering by status
+
+Five tabs at the top let you filter drafts by their processing status:
+
+| Tab | Shows |
+| --- | --- |
+| **All** | Every draft, regardless of status |
+| **Awaiting** | Drafts waiting to be processed |
+| **Scanning** | Drafts currently being scanned |
+| **Completed** | Drafts that have finished scanning successfully |
+| **Failed** | Drafts that failed to process |
+
+A **Found X Drafts** count above the tabs shows how many drafts match the currently selected filter.
+
+<Figure
+  src="/images/drafts-tabs.png"
+  title="Draft Status Tabs"
+  description="Filter drafts by All, Awaiting, Scanning, Completed, or Failed status."
+/>
+
+---
+
+## The drafts table
+
+Each row in the table represents one scanned purchase bill:
+
+| Column | Description |
+| --- | --- |
+| **Draft ID** | Unique identifier for the draft |
+| **Status** | Current processing status (e.g. **Completed**) |
+| **Type** | The module the draft belongs to (**Purchase**) |
+| **Source** | How the draft was created (e.g. **Scan**) |
+| **Files** | Number of files attached to the draft |
+| **Date** | Date the draft was created |
+| **Actions** | Quick action menu for that draft row |
+
+<Figure
+  src="/images/drafts-table.png"
+  title="Drafts Table"
+  description="List of scanned purchase drafts with ID, status, source, files, and date."
+/>
+
+---
+
+## Row actions
+
+Clicking the **three-dot menu (⋮)** on any draft row opens a single option:
+
+| Option | What it does |
+| --- | --- |
+| **Delete Draft** | Permanently removes the draft from the list |
+
+<Figure
+  src="/images/drafts-actions.png"
+  title="Draft Actions"
+  description="Delete a draft permanently from the actions menu."
+/>
+
+---
+
+## Where drafts come from
+
+Drafts are created automatically when you use **Scan** on the **Add Purchase** page. To act on a draft — inserting or appending it into a purchase bill — go to **Add Purchase** and open the **Drafts** panel from there. See [Add Purchase](/docs/purchases/add-purchase) for details.
+
+---
+
+## Clear the Queue
+
+Checked your scanned bills? Here's where to go from here.
+
+<Cards cols={2}>
+  <Card
+    title="Add Purchase"
+    description="Insert or append completed drafts into a full purchase bill."
+    href="/docs/purchases/add-purchase"
+    icon="Plus"
+  />
+  <Card
+    title="Purchase List"
+    description="Review all finalised purchases once drafts are converted."
+    href="/docs/purchases/purchase-list"
+    icon="List"
+  />
+  <Card
+    title="Drug List"
+    description="Verify inventory updated correctly after converting drafts."
+    href="/docs/drugs/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Trash"
+    description="Recover deleted purchases if you removed the wrong draft."
+    href="/docs/purchases/trash"
+    icon="Trash"
+  />
+</Cards>

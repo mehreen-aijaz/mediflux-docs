@@ -1,0 +1,243 @@
+---
+title: Add Wholesale
+description: Create sale and Challan bills for pharmacies and businesses with HSN codes and split tax breakdowns.
+icon: Truck
+---
+
+The **Add Wholesale** page is where you create  sale bills for other pharmacies, distributors, and businesses. It supports both normal sale invoicing and **Challan mode** for delivery notes that can be converted to sales later. The wholesale layout includes additional columns for HSN codes, free units, discounts, and split tax breakdowns.
+
+Navigate here from the sidebar: **Sales → Add Sale**, then click **Wholesale** at the top-right.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800722-967118673-add-sale-sidebar.png"
+  title="Add Wholesale page"
+  description="Wholesale mode with Challan toggle, customer selection, and drug table."
+/>
+
+---
+
+## Scan & Add Drugs
+
+Click **Scan** at the top-right to open the **Scan & Add Drugs** panel. This is designed for **phones and tablets** — it opens your device camera for two input methods:
+
+| Option | What it does |
+| --- | --- |
+| **Barcode Scanner** | Scan drug barcodes with your phone or tablet camera to instantly add items to the bill |
+| **Image (OCR)** | Photograph a prescription, drug label, or drug list with your camera — MediFlux reads the text and populates drugs automatically |
+
+Camera permissions are required for both options on phone and tablet.
+
+If you have a **physical barcode scanner device** connected to your computer, you can scan barcodes directly into the bill without opening the Scan panel. The drug is added instantly with auto-populated name, batch, expiry, MRP, and available stock.
+
+<Note>
+For detailed setup instructions, supported devices, OCR best practices, and troubleshooting, see the [Scan & OCR](/docs/sales/scan-ocr) guide.
+</Note>
+
+---
+
+## Drafts
+
+Click **Drafts** at the top-right to access all saved draft bills. Any bill you save mid-way using **Save Draft** is stored here and can be resumed at any time.
+
+If you are in the middle of adding a sale and need to navigate away, click **Save Draft** to save your progress. You can return to it anytime from Drafts.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800716-13436338-wholesale-draft.png"
+  title="Drafts panel"
+  description="Access saved draft bills and resume them anytime."
+/>
+
+---
+
+## Left Panel
+
+The left panel in Wholesale mode has two options:
+
+| Option | What it does |
+| --- | --- |
+| **Sale Mode** `Shift+S` | Toggle between normal sale mode and Challan mode |
+| **Local Sale (CGST/SGST)** | Toggle between Local Sale (CGST+SGST tax) and Out of State (IGST tax) |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800715-605577947-sale-mode.png"
+  title="Left panel options"
+  description="Sale Mode toggle and Local Sale tax switch."
+/>
+
+### Sale Mode: Normal vs Challan
+
+| Mode | What it does |
+| --- | --- |
+| **Sale Mode** | Creates a standard wholesale invoice with full payment tracking |
+| **Challan Mode** | Creates a delivery challan without immediate payment. The challan is saved as a pending delivery note and can be converted into a sale later |
+
+
+Challan mode is useful when goods are dispatched before payment terms are finalised or when the exact invoice details need to be confirmed after delivery Once converted to a sale, the challan becomes a regular wholesale bill with payment status tracking.
+
+---
+
+## Customer and Salesperson
+
+| Field | Description |
+| --- | --- |
+| **Customer Details** | Search and select the customer for this wholesale |
+| **Select Salesperson** *(Optional)* | Assign a salesperson to this sale for tracking commissions and performance reporting |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938063319-96447838-customer-salesperson.png"
+  title="Customer and salesperson selection"
+  description="Select a wholesale customer and assign a salesperson."
+/>
+
+---
+
+## Payment Status
+
+Select the payment status for this sale:
+
+| Status | Description |
+| --- | --- |
+| **Paid** | Full payment received |
+| **Unpaid** | No payment received yet |
+| **Partial** | Partial payment received |
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938063317-807345784-payment-options.png"
+  title="Payment status selection"
+  description="Choose between Paid, Unpaid, or Partial payment."
+/>
+
+When **Paid** or **Partial** is selected, additional fields appear:
+
+| Field | Description |
+| --- | --- |
+| **Payment Method** | Cash, Card, UPI, or Net Banking |
+| **Paid Amount** | Amount received |
+| **Discount %** | Overall discount on the bill |
+
+When **Cash** is selected as the payment method, no additional bank details are needed.
+
+When **Card**, **UPI**, or **Net Banking** is selected, a **bank details dropdown** appears below showing your linked accounts. Select the appropriate account to record where the payment was received.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938135349-539772848-bank-details.png"
+  title="Bank details dropdown"
+  description="Select the linked account for Card, UPI, or Net Banking payments."
+/>
+
+When **Unpaid** is selected, the Payment Method defaults to **None**, Paid Amount and Discount % remain editable, and the bank details section is hidden.
+
+---
+
+## Drug Table
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Serial number |
+| **Type** | Drug type: Rx, NRx, H1 |
+| **Drug** | Drug name |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date |
+| **HSN** | HSN code of the drug |
+| **Units** | Number of units per pack |
+| **QTY** | Quantity sold |
+| **FREE** | Free or bonus units given with this sale |
+| **Rate** | Negotiated sale rate per unit |
+| **MRP** | Maximum Retail Price |
+| **DIS(%)** | Discount percentage |
+| **CGST%** | Central GST percentage (for local sales) |
+| **SGST%** | State GST percentage (for local sales) |
+| **Subtotal** | Line item subtotal before tax |
+| **Total** | Final line item total after tax |
+
+Click the **grid icon (⊞)** at the bottom of the table to add more drug rows.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260260-548234085-drug-table.png"
+  title="Wholesale drug table"
+  description="Columns for HSN, free units, rate, MRP, discount, and split GST."
+/>
+
+---
+
+## Price Comparison
+
+Once you select a drug and a customer, a hint appears below the drug table:
+
+> Click on a drug and select a customer to view sale history and price comparison
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260255-28942719-previous-sale.png"
+  title="Price comparison hint"
+  description="View past transactions and negotiated rates for this drug and customer."
+/>
+
+If previous sale data exists for that drug and customer, clicking the hint opens a panel showing past transactions with date, batch, rate, and discount. This helps you maintain consistent pricing and quickly reference past negotiations.
+
+If no previous data exists, the message shows: *[Drug name]: No previous sale data available for this customer*.
+
+---
+
+## Additional Notes
+
+The **Additional Notes** field at the bottom is for entering specific instructions, delivery remarks, or terms of sale relevant to the wholesale transaction.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260255-347513752-additional-notes.png"
+  title="Additional notes field"
+  description="Enter delivery remarks, terms of sale, or specific instructions."
+/>
+
+---
+
+## Bill Summary Bar
+
+At the bottom of the page, a fixed summary bar shows a live breakdown of the bill:
+
+**Sub Total − Disc + Tax = Bill**
+
+---
+
+## Saving and Submitting
+
+| Button | What it does |
+| --- | --- |
+| **Save Draft** | Saves the bill as a draft so you can resume it later from Drafts |
+| **+ Add** | Finalises and saves the sale bill (or challan, if in Challan mode) |
+
+---
+
+## Next Actions
+
+After creating a wholesale bill, here's what most users do next:
+
+<Cards cols={2}>
+  <Card
+    title="View Sales List"
+    description="Review and manage all your created wholesale and retail bills."
+    href="/docs/sales/sales-list"
+    icon="List"
+  />
+  <Card
+    title="Check Customer Ledger"
+    description="Track payments and outstanding dues for this wholesale customer."
+    href="/docs/customers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Scan & OCR"
+    description="Use barcode scanning or prescription OCR to add drugs faster."
+    href="/docs/sales/scan-ocr"
+    icon="Scan"
+  />
+  <Card
+    title="Returned Sales"
+    description="Track returned sales and view their ledger entries."
+    href="/docs/sales/returned-sales"
+    icon="RotateCcw"
+  />
+</Cards>
+
+<Callout type="info" title="Switch to Retail">
+  You can switch to **Retail** mode anytime using the toggle at the top-right for individual customer billing.
+</Callout>

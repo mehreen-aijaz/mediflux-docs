@@ -1,0 +1,162 @@
+---
+title: Purchase List
+description: View, search, filter, and manage all your recorded purchases in one place.
+icon: List
+---
+
+The **Purchase List** is your complete record of every purchase made in your pharmacy. You can search across suppliers, drugs, and challan or invoice numbers, and filter by date range, amount, and sort order to quickly find what you're looking for.
+
+---
+
+## Searching purchases
+
+The search bar at the top lets you search across **suppliers, drugs, and challan/invoice numbers**. Just start typing and the list filters instantly.
+
+To the left of the search bar is an **All** dropdown, which lets you narrow the search scope to a specific field:
+
+| Option | Searches by |
+| --- | --- |
+| **All** | Every field below, combined |
+| **Invoice Number** | Invoice number only |
+| **Challan Number** | Challan number only |
+| **Supplier** | Supplier name only |
+| **Drugs** | Drug name only |
+
+<Figure
+  src="/images/purchase-list-search.png"
+  title="Search Purchases"
+  description="Search across suppliers, drugs, and challan or invoice numbers with scoped filtering."
+/>
+
+---
+
+## The purchase table
+
+The main table lists all your purchases with the following columns:
+
+| Column | Description |
+| --- | --- |
+| **Purchase Details** | Purchase number, and challan number where applicable |
+| **Supplier** | Supplier name and date/time of the purchase |
+| **Items** | Total value of the purchase and number of items |
+| **Actions** | Quick action menu for that purchase row |
+
+The page shows a **Found X** count above the table indicating how many purchases match the current filters.
+
+Some purchases carry a status tag next to the purchase number:
+
+| Status | Meaning |
+| --- | --- |
+| **Partial** | Purchase partially received |
+| **Returned** | Purchase returned to the supplier |
+
+<Figure
+  src="/images/purchase-list-table.png"
+  title="Purchase Table"
+  description="List of purchases with status tags, supplier details, and item counts."
+/>
+
+---
+
+## Expanding a purchase row
+
+Click the **chevron (˅)** on the left of any purchase row to expand it and see the full line item breakdown:
+
+| Column | Description |
+| --- | --- |
+| **SR.** | Serial number of the line item |
+| **HSN** | HSN code of the drug |
+| **Product** | Name of the drug |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date of the batch |
+| **QTY** | Quantity purchased |
+| **Rate** | Purchase rate per unit |
+| **MRP** | Maximum Retail Price |
+| **Total** | Total amount for that line item |
+
+The **Grand Total** is shown at the bottom right of the expanded row.
+
+<Figure
+  src="/images/purchase-list-expanded.png"
+  title="Expanded Purchase Row"
+  description="Line item breakdown with HSN, batch, expiry, quantity, rate, MRP, and total."
+/>
+
+---
+
+## Row actions
+
+Clicking the **three-dot menu (⋮)** on any purchase row opens a quick-actions menu with three options:
+
+| Option | What it does |
+| --- | --- |
+| **View Details** | Opens the full details for this purchase |
+| **View Invoice** | Opens the invoice for this purchase |
+| **Update** | Edit this purchase entry |
+
+Note: Clicking any purchase row — or selecting **View Details** from its actions menu — opens the full **Purchase Details** page, with a complete breakdown of the summary, line items, and invoice. See [Purchase Details](/docs/purchases/purchase-details) for more.
+
+<Figure
+  src="/images/purchase-list-actions.png"
+  title="Row Actions"
+  description="Quick actions menu for viewing details, viewing invoice, or updating a purchase."
+/>
+
+---
+
+## Filters panel
+
+Click the **Filter** button at the top-right to open the **Purchases Filters** panel:
+
+| Filter | Options |
+| --- | --- |
+| **Date Range** | Custom From Date and To Date |
+| **Amount Range** | Min Amount (₹) and Max Amount (₹) |
+| **Sort By** | Sort Field: Purchase Date. Order: Ascending or Descending |
+
+Click **Apply** to apply the selected filters, or **Clear** to reset them.
+
+<Figure
+  src="/images/purchase-list-filters.png"
+  title="Filters Panel"
+  description="Filter by date range, amount range, and sort order."
+/>
+
+---
+
+## Adding a purchase from anywhere
+
+You don't have to navigate to the Purchases section to add a purchase. Click the **`+` button** in the top-right corner of any screen and select **Add Purchase** to start a new purchase bill from anywhere in MediFlux.
+
+---
+
+## Keep Track of Stock
+
+Reviewed your purchases? Here's what to do next.
+
+<Cards cols={2}>
+  <Card
+    title="Add Purchase"
+    description="Record a new purchase bill when fresh stock arrives."
+    href="/docs/purchases/add-purchase"
+    icon="Plus"
+  />
+  <Card
+    title="Drug List"
+    description="Check how your inventory looks after recent purchases."
+    href="/docs/drugs/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Supplier Ledger"
+    description="See what you still owe suppliers for unpaid purchases."
+    href="/docs/suppliers/ledger"
+    icon="BookOpen"
+  />
+  <Card
+    title="Purchase Orders"
+    description="Raise orders for stock you haven't received yet."
+    href="/docs/purchases/purchase-orders"
+    icon="ClipboardList"
+  />
+</Cards>
